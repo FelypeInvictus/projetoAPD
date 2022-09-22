@@ -1,6 +1,0 @@
-guga (arquivo do jairo)
-<<<<<<< HEAD
-Felype Invictus este aqui também
-=======
-caio (arquivo asghdkjasdbjasd)
->>>>>>> e1e04765b99bb78b7471246c1036085f00ba8e59
