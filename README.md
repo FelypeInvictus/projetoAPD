@@ -18,6 +18,7 @@ Caio
 ![Vita brevis Ars longa  COVER](https://user-images.githubusercontent.com/89306240/192055411-071b9599-1ee5-4f14-a5bb-b1607f7bb26e.jpg)
 
 **ESTRUTURA DE ARQUIVOS:**
+<p>
 .
 ├── debugAPD
 │   ├── analysis_options.yaml
@@ -2062,4 +2063,4 @@ Caio
 └── textTemp.txt
 
 740 directories, 1301 files
-
+</p>
