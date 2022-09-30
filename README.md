@@ -5,10 +5,10 @@
 BACKEND:
 Felype,
 Peterson,
-Jairo,
-Guilherme
+Jairo
 
 - Banco de dados: Gustavo
+- Documentação: Guilherme
 
 FRONTEND:
 Caio
