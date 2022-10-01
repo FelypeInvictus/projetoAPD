@@ -1,0 +1,4 @@
+#Fri Sep 30 21:54:23 BRT 2022
+base.0=/home/invictus/Debug/DebugAPD/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
