@@ -1,5 +1,5 @@
 
-import 'package:app/models/ChatMessage.dart';
+import 'package:apd/models/ChatMessage.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';

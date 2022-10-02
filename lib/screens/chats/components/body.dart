@@ -1,7 +1,7 @@
-import 'package:app/components/filled_outline_button.dart';
-import 'package:app/constants.dart';
-import 'package:app/models/Chat.dart';
-import 'package:app/screens/messages/message_screen.dart';
+import 'package:apd/components/filled_outline_button.dart';
+import 'package:apd/constants.dart';
+import 'package:apd/models/Chat.dart';
+import 'package:apd/screens/messages/message_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'chat_card.dart';

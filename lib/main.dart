@@ -1,7 +1,7 @@
 import 'dart:ui';
 
-import 'package:app/rootpage.dart';
-import 'package:app/screens/transition/transicao.dart';
+import 'package:apd/rootpage.dart';
+import 'package:apd/screens/transition/transicao.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

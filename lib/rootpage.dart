@@ -1,5 +1,5 @@
-import 'package:app/screens/homePage/home_page.dart';
-import 'package:app/screens/transition/transicao.dart';
+import 'package:apd/screens/homePage/home_page.dart';
+import 'package:apd/screens/transition/transicao.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
