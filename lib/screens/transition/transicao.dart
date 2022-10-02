@@ -6,7 +6,6 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:app/screens/chats/chats_screen.dart';
 
-
 construirPagina({
   required Color color,
   required String urlImage,
@@ -76,19 +75,19 @@ class _MyAppState extends State<MyApp> {
           children: [
             construirPagina(
                 color: Colors.green.shade100,
-                urlImage: 'imagens/page1.png',
+                urlImage: 'transition/page1.png',
                 title: 'O que oferecemos?',
                 subtitle:
                     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '),
             construirPagina(
                 color: Colors.blue.shade100,
-                urlImage: 'imagens/page2.png',
+                urlImage: 'transition/page2.png',
                 title: 'Qual o diferencial?',
                 subtitle:
                     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '),
             construirPagina(
                 color: Colors.green.shade100,
-                urlImage: 'imagens/page3.png',
+                urlImage: 'transition/page3.png',
                 title: 'Nosso objetivo',
                 subtitle:
                     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '),
@@ -99,7 +98,8 @@ class _MyAppState extends State<MyApp> {
           ? TextButton(
               style: TextButton.styleFrom(
                   // ignore: prefer_const_constructors
-                  foregroundColor: Colors.white, shape: RoundedRectangleBorder(
+                  foregroundColor: Colors.white,
+                  shape: const RoundedRectangleBorder(
                       //borderRadius: BorderRadius.circular(10),
                       ),
                   backgroundColor: Colors.teal.shade700,

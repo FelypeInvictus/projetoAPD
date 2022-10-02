@@ -1,7 +1,7 @@
 import 'package:app/screens/homePage/home_page.dart';
+import 'package:app/screens/transition/transicao.dart';
 import 'package:flutter/material.dart';
-
-
+import 'package:shared_preferences/shared_preferences.dart';
 
 class RootPage extends StatefulWidget {
   const RootPage({super.key});
@@ -18,6 +18,19 @@ class _RootPageState extends State<RootPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Debug APD"),
+        actions: [
+          IconButton(
+              icon: const Icon(Icons.logout),
+              onPressed: () async {
+                // Retonar para a tela de transição
+                final prefs = await SharedPreferences.getInstance();
+                prefs.setBool('mostrarTelaPrincipal', false);
+
+                Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (context) => MyApp()),
+                );
+              }),
+        ],
       ),
       body: const HomePage(),
       // floatingActionButton: FloatingActionButton(
@@ -28,7 +41,8 @@ class _RootPageState extends State<RootPage> {
         destinations: const [
           NavigationDestination(icon: Icon(Icons.home), label: "Home"),
           NavigationDestination(icon: Icon(Icons.message), label: "Mensagem"),
-          NavigationDestination(icon: Icon(Icons.polyline_outlined), label: "Forum"),
+          NavigationDestination(
+              icon: Icon(Icons.polyline_outlined), label: "Forum"),
           NavigationDestination(icon: Icon(Icons.person), label: "Perfil"),
           //NavigationDestination(icon: Icon(Icons.person), label: "Perfil") incluir icone meditação
         ],
