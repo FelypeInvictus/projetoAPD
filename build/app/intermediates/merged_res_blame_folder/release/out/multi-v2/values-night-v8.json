@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/invictus/Debug/DebugAPD/build/app/intermediates/incremental/mergeReleaseResources/merged.dir/values-night-v8/values-night-v8.xml",
+            "outputFile": "/home/invictus/atividadesSalaDDS/projetoAPD/build/app/intermediates/incremental/mergeReleaseResources/merged.dir/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/home/invictus/Debug/DebugAPD/android/app/src/main/res/values-night/styles.xml",
+                    "source": "/home/invictus/atividadesSalaDDS/projetoAPD/android/app/src/main/res/values-night/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",

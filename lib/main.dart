@@ -1,7 +1,9 @@
 import 'dart:ui';
 
+import 'package:apd/constants.dart';
 import 'package:apd/rootpage.dart';
 import 'package:apd/screens/transition/transicao.dart';
+import 'package:apd/screens/welcome/welcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -90,30 +92,78 @@ class MeuApp extends StatelessWidget {
     required this.mostraTelaPrincipal,
   }) : super(key: key);
 
+// Codigo principal
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//       theme: ThemeData(
+//         primarySwatch: Colors.green,
+//         scaffoldBackgroundColor: Colors.white,
+//         textTheme: const TextTheme(
+//             bodyText2: TextStyle(fontSize: 64, color: Colors.lightGreen)),
+//         textButtonTheme: TextButtonThemeData(
+//           style: TextButton.styleFrom(
+//             foregroundColor: Colors.teal.shade700,
+//             textStyle: const TextStyle(
+//               fontSize: 18,
+//               fontWeight: FontWeight.bold,
+//             ),
+//           ),
+//         ),
+//       ),
+//       //Só mude se souber o que está fazendo
+//       home: mostraTelaPrincipal ? const RootPage() : const MyApp(),
+//     );
+//   }
+// }
+
+// class MeuApp extends StatelessWidget {
+//   const MeuApp({Key? key}) : super(key: key);
+
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      title: 'Flutter Auth',
       theme: ThemeData(
-        primarySwatch: Colors.green,
-        scaffoldBackgroundColor: Colors.white,
-        textTheme: const TextTheme(
-            bodyText2: TextStyle(fontSize: 64, color: Colors.lightGreen)),
-        textButtonTheme: TextButtonThemeData(
-          style: TextButton.styleFrom(
-            foregroundColor: Colors.teal.shade700,
-            textStyle: const TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
+          primaryColor: kPrimaryColor,
+          scaffoldBackgroundColor: Colors.white,
+          elevatedButtonTheme: ElevatedButtonThemeData(
+            style: ElevatedButton.styleFrom(
+              elevation: 0,
+              primary: kPrimaryColor,
+              shape: const StadiumBorder(),
+              maximumSize: const Size(double.infinity, 56),
+              minimumSize: const Size(double.infinity, 56),
             ),
           ),
-        ),
-      ),
-      //Só mude se souber o que está fazendo
+          inputDecorationTheme: const InputDecorationTheme(
+            filled: true,
+            fillColor: kPrimaryLightColor,
+            iconColor: kPrimaryColor,
+            prefixIconColor: kPrimaryColor,
+            contentPadding: EdgeInsets.symmetric(
+                horizontal: defaultPadding, vertical: defaultPadding),
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.all(Radius.circular(30)),
+              borderSide: BorderSide.none,
+            ),
+          )),
       home: mostraTelaPrincipal ? const RootPage() : const MyApp(),
     );
   }
 }
+
+
+
+
+
+
+
+
+
 
 
 // class MeuApp extends StatelessWidget {

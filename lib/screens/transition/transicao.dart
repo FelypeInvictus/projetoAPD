@@ -1,5 +1,6 @@
 import 'package:apd/rootpage.dart';
 import 'package:apd/screens/messages/message_screen.dart';
+import 'package:apd/screens/welcome/welcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:onboarding/onboarding.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -113,7 +114,7 @@ class _MyAppState extends State<MyApp> {
                 final prefs = await SharedPreferences.getInstance();
                 prefs.setBool('mostraTelaPrincipal', true);
                 Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(builder: (context) => const RootPage()));
+                    MaterialPageRoute(builder: (context) => const WelcomeScreen()));
               },
             )
           : Container(
