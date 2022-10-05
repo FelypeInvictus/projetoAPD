@@ -33,10 +33,6 @@ class _RootPageState extends State<RootPage> {
         ],
       ),
       body: const HomePage(),
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: () {},
-      //   child: const Icon(Icons.add),
-      // ),
       bottomNavigationBar: NavigationBar(
         destinations: const [
           NavigationDestination(icon: Icon(Icons.home), label: "Home"),

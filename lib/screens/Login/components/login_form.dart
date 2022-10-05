@@ -5,6 +5,11 @@ import '../../../components/already_have_an_account_acheck.dart';
 import '../../../constants.dart';
 import '../../Signup/signup_screen.dart';
 
+//Declarando variaveis email e senha
+String email = '';
+String pwd = '';
+
+// ignore: must_be_immutable
 class LoginForm extends StatelessWidget {
   const LoginForm({
     Key? key,
@@ -12,10 +17,18 @@ class LoginForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Form(
+    return Scaffold(
+      body: SingleChildScrollView(
+      child: SizedBox(
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,  
       child: Column(
         children: [
           TextFormField(
+            //Aqui é onde a entrada é recebida na variavel
+            onChanged: (inputReb) {
+              email = inputReb;
+            },
             keyboardType: TextInputType.emailAddress,
             textInputAction: TextInputAction.next,
             cursorColor: kPrimaryColor,
@@ -31,6 +44,10 @@ class LoginForm extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(vertical: defaultPadding),
             child: TextFormField(
+              //Aqui é onde a entrada é recebida na variavel
+              onChanged: (inputReb) {
+                pwd = inputReb;
+              },
               textInputAction: TextInputAction.done,
               obscureText: true,
               cursorColor: kPrimaryColor,
@@ -46,23 +63,21 @@ class LoginForm extends StatelessWidget {
           const SizedBox(height: defaultPadding),
           Hero(
             tag: "login_btn",
-            child: ElevatedButton(          
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) {
-                    return const RootPage();
-                  },
-                ),
-              );
-            },
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return const RootPage();
+                    },
+                  ),
+                );
+              },
               // onPressed: () {  },
-              
+
               child: Text(
                 "Entrar".toUpperCase(),
-              
-              
               ),
             ),
           ),
@@ -81,6 +96,8 @@ class LoginForm extends StatelessWidget {
           ),
         ],
       ),
+    ),
+    ),
     );
   }
 }
