@@ -1,3 +1,2 @@
-2022/10/03-11:51:10.815 5 Reusing MANIFEST /tmp/flutter_tools.LQBSML/flutter_tools_chrome_device.BCWCWL/Default/Local Storage/leveldb/MANIFEST-000001
-2022/10/03-11:51:10.822 5 Recovering log #3
-2022/10/03-11:51:10.824 5 Reusing old log /tmp/flutter_tools.LQBSML/flutter_tools_chrome_device.BCWCWL/Default/Local Storage/leveldb/000003.log 
+2022/10/05-14:07:29.323 2290 Creating DB C:\Users\aluno\AppData\Local\Temp\flutter_tools.30987cb8\flutter_tools_chrome_device.56671970\Default\Local Storage\leveldb since it was missing.
+2022/10/05-14:07:29.336 2290 Reusing MANIFEST C:\Users\aluno\AppData\Local\Temp\flutter_tools.30987cb8\flutter_tools_chrome_device.56671970\Default\Local Storage\leveldb/MANIFEST-000001
