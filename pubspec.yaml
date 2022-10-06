@@ -39,7 +39,15 @@ dependencies:
   google_fonts: ^3.0.1
   flutter_svg: ^1.1.5
   flutter_auth: ^0.0.1
+<<<<<<< HEAD
   cloud_firestore: ^3.1.5
+=======
+  flutter_native_splash: ^2.2.10+1
+
+  flutter_native_splash:
+  color: "#b0df9a"
+  image: assets/screen_splash
+>>>>>>> 5d1a855de87bdb5b88ccd6f7d39873cc3e380e87
 
 dev_dependencies:
   onboarding: ^3.1.0
