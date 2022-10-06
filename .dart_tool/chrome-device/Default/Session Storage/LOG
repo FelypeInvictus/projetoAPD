@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 2022/10/05-10:36:20.314 3 Reusing MANIFEST /tmp/flutter_tools.KTAANW/flutter_tools_chrome_device.RJTOVA/Default/Session Storage/MANIFEST-000001
 2022/10/05-10:36:20.329 3 Recovering log #3
 2022/10/05-10:36:20.374 3 Reusing old log /tmp/flutter_tools.KTAANW/flutter_tools_chrome_device.RJTOVA/Default/Session Storage/000003.log 
-=======
+
 2022/10/05-14:07:29.326 18a0 Creating DB C:\Users\aluno\AppData\Local\Temp\flutter_tools.30987cb8\flutter_tools_chrome_device.56671970\Default\Session Storage since it was missing.
 2022/10/05-14:07:29.335 18a0 Reusing MANIFEST C:\Users\aluno\AppData\Local\Temp\flutter_tools.30987cb8\flutter_tools_chrome_device.56671970\Default\Session Storage/MANIFEST-000001
->>>>>>> 5d1a855de87bdb5b88ccd6f7d39873cc3e380e87
+

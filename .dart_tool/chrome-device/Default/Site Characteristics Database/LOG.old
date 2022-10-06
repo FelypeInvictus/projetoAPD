@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 2022/10/05-08:16:39.605 2ba1 Reusing MANIFEST /tmp/flutter_tools.YDKQOS/flutter_tools_chrome_device.MOUMQD/Default/Site Characteristics Database/MANIFEST-000001
 2022/10/05-08:16:39.606 2ba1 Recovering log #3
 2022/10/05-08:16:39.606 2ba1 Reusing old log /tmp/flutter_tools.YDKQOS/flutter_tools_chrome_device.MOUMQD/Default/Site Characteristics Database/000003.log 
-=======
+
 2022/10/05-14:07:29.267 1fd8 Log #3: 10 ops saved to Table #4 OK
 2022/10/05-14:07:29.268 1fd8 Archiving C:\Users\aluno\AppData\Local\Temp\flutter_tools.30987cb8\flutter_tools_chrome_device.56671970\Default\Site Characteristics Database/000003.log: OK
 2022/10/05-14:07:29.268 1fd8 Table #4: 10 entries OK
 2022/10/05-14:07:29.269 1fd8 Archiving C:\Users\aluno\AppData\Local\Temp\flutter_tools.30987cb8\flutter_tools_chrome_device.56671970\Default\Site Characteristics Database/MANIFEST-000001: OK
 2022/10/05-14:07:29.274 1fd8 **** Repaired leveldb C:\Users\aluno\AppData\Local\Temp\flutter_tools.30987cb8\flutter_tools_chrome_device.56671970\Default\Site Characteristics Database; recovered 1 files; 283 bytes. Some data may have been lost. ****
->>>>>>> 5d1a855de87bdb5b88ccd6f7d39873cc3e380e87
+
