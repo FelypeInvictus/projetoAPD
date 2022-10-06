@@ -1,4 +1,4 @@
-#Wed Oct 05 12:24:30 BRT 2022
-base.0=/home/invictus/atividadesSalaDDS/projetoAPD/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+#Thu Oct 06 11:36:12 BRT 2022
+base.0=/home/invictus/atividadesSalaDDS/projetoAPDforMe/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 renamed.0=classes.dex
 path.0=classes.dex
