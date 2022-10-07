@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../avaliacao.dart';
+import '../questions/avaliacao.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

@@ -47,14 +47,14 @@ construirPagina({
       ),
     );
 
-class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+class onBoarding extends StatefulWidget {
+  const onBoarding({Key? key}) : super(key: key);
 
   @override
-  State<MyApp> createState() => _MyAppState();
+  State<onBoarding> createState() => _onBoardingState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _onBoardingState extends State<onBoarding> {
   final controle = PageController();
   bool ultimaPagina = false;
 
@@ -114,7 +114,7 @@ class _MyAppState extends State<MyApp> {
                 final prefs = await SharedPreferences.getInstance();
                 prefs.setBool('mostraTelaPrincipal', true);
                 Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(builder: (context) => const WelcomeScreen()));
+                    MaterialPageRoute(builder: (context) => const RootPage()));
               },
             )
           : Container(

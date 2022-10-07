@@ -27,7 +27,7 @@ class _RootPageState extends State<RootPage> {
                 prefs.setBool('mostrarTelaPrincipal', false);
 
                 Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (context) => MyApp()),
+                  MaterialPageRoute(builder: (context) => onBoarding()),
                 );
               }),
         ],

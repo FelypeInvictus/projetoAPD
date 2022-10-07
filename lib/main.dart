@@ -151,7 +151,10 @@ class MeuApp extends StatelessWidget {
               borderSide: BorderSide.none,
             ),
           )),
-      home: mostraTelaPrincipal ? const RootPage() : const MyApp(),
+
+      //home: mostraTelaPrincipal ? const RootPage() : const MyApp(),
+      home: mostraTelaPrincipal ? const RootPage()  :  const WelcomeScreen(),
+
     );
   }
 }
