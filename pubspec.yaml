@@ -42,11 +42,9 @@ dependencies:
 
   cloud_firestore: ^3.1.5
 
-  flutter_native_splash: ^2.2.10+1
+  
 
-  flutter_native_splash:
-  color: "#b0df9a"
-  image: assets/screen_splash
+  
 
 
 dev_dependencies:
@@ -55,6 +53,11 @@ dev_dependencies:
   shared_preferences: ^2.0.12
   flutter_test:
     sdk: flutter
+  flutter_native_splash: ^2.2.10
+
+flutter_native_splash:
+  color: "#b0df9a"
+  image: assets/screen_splash/LoadingLogo.png
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
