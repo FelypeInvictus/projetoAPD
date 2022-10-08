@@ -1,10 +1,9 @@
 import 'package:apd/rootpage.dart';
-import 'package:apd/screens/transition/transicao.dart';
+import 'package:apd/screens/signup/signup_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../components/already_have_an_account_acheck.dart';
 import '../../../constants.dart';
-import '../../signup/signup_screen.dart';
 
 //Declarando variaveis email e senha
 String email = '';
@@ -19,7 +18,6 @@ class LoginForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Form(
-<<<<<<< HEAD:lib/screens/login/components/login_form.dart
       child: Column(
         children: [
           TextFormField(
@@ -67,95 +65,31 @@ class LoginForm extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return const onBoarding();
+                      return const RootPage();
                     },
-=======
-        child: SingleChildScrollView(
-            child: SizedBox(
-      child: Center(
-        child: Padding(
-          padding: EdgeInsets.all(8.0),
-          child: Column(
-            children: [
-              TextFormField(
-                //Aqui é onde a entrada é recebida na variavel
-                onChanged: (inputReb) {
-                  email = inputReb;
-                },
-                keyboardType: TextInputType.emailAddress,
-                textInputAction: TextInputAction.next,
-                cursorColor: kPrimaryColor,
-                onSaved: (email) {},
-                decoration: const InputDecoration(
-                  hintText: "Seu e-mail",
-                  prefixIcon: Padding(
-                    padding: EdgeInsets.all(defaultPadding),
-                    child: Icon(Icons.person),
                   ),
-                ),
+                );
+              },
+              child: Text(
+                "Entrar".toUpperCase(),
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: defaultPadding),
-                child: TextFormField(
-                  //Aqui é onde a entrada é recebida na variavel
-                  onChanged: (inputReb) {
-                    pwd = inputReb;
-                  },
-                  textInputAction: TextInputAction.done,
-                  obscureText: true,
-                  cursorColor: kPrimaryColor,
-                  decoration: const InputDecoration(
-                    hintText: "Sua senha",
-                    prefixIcon: Padding(
-                      padding: EdgeInsets.all(defaultPadding),
-                      child: Icon(Icons.lock),
-                    ),
->>>>>>> eb93f623caac912f246b36b7f35767a9df627087:lib/screens/Login/components/login_form.dart
-                  ),
-                ),
-              ),
-              const SizedBox(height: defaultPadding),
-              Hero(
-                tag: "login_btn",
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) {
-                          return const RootPage();
-                        },
-                      ),
-                    );
-                  },
-                  // onPressed: () {  },
-
-                  child: Text(
-                    "Entrar".toUpperCase(),
-                  ),
-                ),
-              ),
-              const SizedBox(height: defaultPadding),
-              AlreadyHaveAnAccountCheck(
-                press: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) {
-                        return const SignUpScreen();
-                      },
-                    ),
-                  );
-                },
-              ),
-            ],
+            ),
           ),
-        ),
+          const SizedBox(height: defaultPadding),
+          AlreadyHaveAnAccountCheck(
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return const SignUpScreen();
+                  },
+                ),
+              );
+            },
+          ),
+        ],
       ),
-<<<<<<< HEAD:lib/screens/login/components/login_form.dart
     );
-=======
-    )));
->>>>>>> eb93f623caac912f246b36b7f35767a9df627087:lib/screens/Login/components/login_form.dart
   }
 }
