@@ -30,7 +30,7 @@ class WelcomeImage extends StatelessWidget {
             Expanded(
               flex: 8,
               child: SvgPicture.asset(
-                "icons/screenLogin/icons/chat.svg",
+                "assets/icons/screenLogin/icons/chat.svg",
               ),
             ),
             const Spacer(),

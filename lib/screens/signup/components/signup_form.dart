@@ -16,7 +16,7 @@ String loginUPPwd = '';
 final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
 class SignUpForm extends StatelessWidget {
-  SignUpForm({
+  const SignUpForm({
     Key? key,
   }) : super(key: key);
 
