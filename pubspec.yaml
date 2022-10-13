@@ -82,10 +82,12 @@ flutter:
   #To add assets to your application, add an assets section, like this:
   assets:
     - assets/
-      #- assets/transition/
-      #- assets/icons/
-      #- assets/images/
-  #   - images/a_dot_ham.jpeg
+    - assets/icons/
+    - assets/transition/
+    - assets/icons/screenLogin/icons/
+    - assets/images/
+    - assets/images/screenLogin/images/
+    - assets/screen_splash/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

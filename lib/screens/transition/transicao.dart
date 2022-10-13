@@ -76,19 +76,19 @@ class _onBoardingState extends State<onBoarding> {
           children: [
             construirPagina(
                 color: Colors.green.shade100,
-                urlImage: 'transition/page1.png',
+                urlImage: 'assets/transition/page1.png',
                 title: 'O que oferecemos?',
                 subtitle:
                     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '),
             construirPagina(
                 color: Colors.blue.shade100,
-                urlImage: 'transition/page2.png',
+                urlImage: 'assets/transition/page2.png',
                 title: 'Qual o diferencial?',
                 subtitle:
                     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '),
             construirPagina(
                 color: Colors.green.shade100,
-                urlImage: 'transition/page3.png',
+                urlImage: 'assets/transition/page3.png',
                 title: 'Nosso objetivo',
                 subtitle:
                     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '),
