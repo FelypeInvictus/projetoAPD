@@ -60,7 +60,8 @@ dev_dependencies:
 flutter_native_splash:
   color: "#b0df9a"
   image: assets/screen_splash/LoadingLogo.png
-
+  size: 200
+  
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
