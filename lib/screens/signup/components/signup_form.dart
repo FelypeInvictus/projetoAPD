@@ -13,6 +13,23 @@ String loginUPLastName = '';
 String loginUPEmail = '';
 String loginUPPwd = '';
 
+// Configuração do firebase / Entrada de dados
+
+// Editando Controller
+  final firstNameEditingController = new TextEditingController();
+  final secondNameEditingController = new TextEditingController();
+  final emailEditingController = new TextEditingController();
+  final passwordEditingController = new TextEditingController();
+  final confirmPasswordEditingController = new TextEditingController();
+
+
+
+
+
+
+
+
+
 final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
 class SignUpForm extends StatelessWidget {
@@ -78,7 +95,7 @@ class SignUpForm extends StatelessWidget {
                   child: Icon(Icons.email),
                 ),
               ),
-              onChanged: (inputEmail) => {loginUPEmail = inputEmail!},
+              onChanged: (inputEmail) => {loginUPEmail = inputEmail},
               validator: EmailValidator(errorText: "Use um email válido"),
             ),
           ),

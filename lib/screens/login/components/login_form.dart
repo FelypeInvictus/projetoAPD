@@ -1,7 +1,7 @@
-import 'package:apd/rootpage.dart';
+import 'package:apd/screens/home_page/home_page.dart';
 import 'package:apd/screens/signup/components/signup_form.dart';
 import 'package:apd/screens/signup/signup_screen.dart';
-import 'package:apd/screens/transition/transicao.dart';
+import 'package:apd/screens/onBoarding/transicao.dart';
 import 'package:flutter/material.dart';
 import 'package:apd/screens/signup/components/signup_form.dart';
 import 'package:top_snackbar_flutter/custom_snack_bar.dart';
