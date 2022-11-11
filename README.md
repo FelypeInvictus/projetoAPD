@@ -4,13 +4,13 @@
 
 BACKEND:
 Felype,
-Peterson,
-Jairo
+Peterson
 
-- Banco de dados: Gustavo
+
+- Banco de dados: Gustavo, Jairo
 - Documentação: Guilherme
 
-FRONTEND:
+DESENVOLVEDOR WEB:
 Caio
 
 
