@@ -16,19 +16,11 @@ String loginUPPwd = '';
 // Configuração do firebase / Entrada de dados
 
 // Editando Controller
-  final firstNameEditingController = new TextEditingController();
-  final secondNameEditingController = new TextEditingController();
-  final emailEditingController = new TextEditingController();
-  final passwordEditingController = new TextEditingController();
-  final confirmPasswordEditingController = new TextEditingController();
-
-
-
-
-
-
-
-
+final firstNameEditingController = new TextEditingController();
+final secondNameEditingController = new TextEditingController();
+final emailEditingController = new TextEditingController();
+final passwordEditingController = new TextEditingController();
+final confirmPasswordEditingController = new TextEditingController();
 
 final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
@@ -130,7 +122,9 @@ class SignUpForm extends StatelessWidget {
                   child: Icon(Icons.lock),
                 ),
               ),
-              validator: (pass) => MatchValidator(errorText: "A combinação está incorreta").validateMatch(pass!, loginUPPwd),
+              validator: (pass) =>
+                  MatchValidator(errorText: "A combinação está incorreta")
+                      .validateMatch(pass!, loginUPPwd),
             ),
           ),
 
@@ -139,6 +133,10 @@ class SignUpForm extends StatelessWidget {
             onPressed: () {
               if (_formKey.currentState!.validate()) {
                 _formKey.currentState!.save();
+                showTopSnackBar(
+                  context,
+                  CustomSnackBar.success(
+                      message: "Registro realizado com sucesso"));
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) {
@@ -147,16 +145,14 @@ class SignUpForm extends StatelessWidget {
                 );
               } else {
                 showTopSnackBar(
-                        context,
-                        CustomSnackBar.error(
-                          message:
-                              "Preencha os campos corretamente",
-                        ),
-                
+                  context,
+                  CustomSnackBar.error(
+                    message: "Preencha os campos corretamente",
+                  ),
                 );
                 // ScaffoldMessenger.of(context).showSnackBar(
                 //   const SnackBar(
-                //     content: Text( 
+                //     content: Text(
                 //       "Preencha os campos corretamente"),
                 //   ),
                 // );
@@ -168,6 +164,7 @@ class SignUpForm extends StatelessWidget {
           AlreadyHaveAnAccountCheck(
             login: false,
             press: () {
+              
               Navigator.push(
                 context,
                 MaterialPageRoute(

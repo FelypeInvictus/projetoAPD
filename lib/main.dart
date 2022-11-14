@@ -35,7 +35,7 @@ class MeuApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Assistencia Psicologica ao Docente - APD',
+      title: 'Assistência Psicologica ao Docente - APD',
       theme: ThemeData(
           primaryColor: kPrimaryColor,
           scaffoldBackgroundColor: Colors.white,
