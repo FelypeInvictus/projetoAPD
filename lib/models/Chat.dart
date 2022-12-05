@@ -1,3 +1,5 @@
+import 'package:apd/screens/signup/components/signup_form.dart';
+
 class Chat {
   final String name, lastMessage, image, time;
   final bool isActive;
@@ -13,59 +15,45 @@ class Chat {
 
 List chatsData = [
   Chat(
-    name: "Jenny Wilson",
-    lastMessage: "Hope you are doing well...",
+    name: "José Torres",
+    lastMessage: "Vida que segue...",
     image: "assets/images/user.png",
-    time: "3m ago",
+    time: "3m atrás",
     isActive: false,
   ),
   Chat(
-    name: "Esther Howard",
-    lastMessage: "Hello Abdullah! I am...",
+    name: "Isabela Helena",
+    lastMessage: "Felizmente aqui no SENAI não é assim. É bem calmo.",
     image: "assets/images/user_2.png",
-    time: "8m ago",
+    time: "8m atrás",
     isActive: true,
   ),
   Chat(
-    name: "Ralph Edwards",
-    lastMessage: "Do you have update...",
+    name: "Dr. Rodolfo Lima",
+    lastMessage: "Sim, a meditação é essêncial para lidar com o estresse.",
     image: "assets/images/user_3.png",
-    time: "5d ago",
+    time: "5d atrás",
     isActive: false,
   ),
   Chat(
-    name: "Jacob Jones",
-    lastMessage: "You’re welcome :)",
+    name: "Jacob Silva",
+    lastMessage: "Trabalho no SESI faz uns 5 anos. E você, ${loginUPName}?",
     image: "assets/images/user_4.png",
-    time: "5d ago",
+    time: "5d atrás",
     isActive: true,
   ),
   Chat(
-    name: "Albert Flores",
-    lastMessage: "Thanks",
+    name: "Esther Flores",
+    lastMessage: "Obrigada!",
     image: "assets/images/user_5.png",
-    time: "6d ago",
+    time: "6d atrás",
     isActive: false,
   ),
   Chat(
-    name: "Jenny Wilson",
-    lastMessage: "Hope you are doing well...",
+    name: "Jéssica Borges",
+    lastMessage: "Músicas relaxantes também ajudam!",
     image: "assets/images/user.png",
-    time: "3m ago",
-    isActive: false,
-  ),
-  Chat(
-    name: "Esther Howard",
-    lastMessage: "Hello Abdullah! I am...",
-    image: "assets/images/user_2.png",
-    time: "8m ago",
-    isActive: true,
-  ),
-  Chat(
-    name: "Ralph Edwards",
-    lastMessage: "Do you have update...",
-    image: "assets/images/user_3.png",
-    time: "5d ago",
+    time: "3m atrás",
     isActive: false,
   ),
 ];

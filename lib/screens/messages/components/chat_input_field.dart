@@ -52,7 +52,7 @@ class ChatInputField extends StatelessWidget {
                     Expanded(
                       child: TextField(
                         decoration: InputDecoration(
-                          hintText: "Type message",
+                          hintText: "Digite sua mensagem",
                           border: InputBorder.none,
                         ),
                       ),

@@ -11,17 +11,20 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        //Gambiarra para ajustar o container na tela do smartphone (o container simula um appBar)
+        greenBar(),
+        greenBar(),
         Container(
           padding: EdgeInsets.fromLTRB(
-              kDefaultPadding, 0, kDefaultPadding, kDefaultPadding),
-          color: kPrimaryColor,
+        kDefaultPadding, 0, kDefaultPadding, kDefaultPadding),
+    color: kPrimaryColor,
           child: Row(
             children: [
-              FillOutlineButton(press: () {}, text: "Recent Message"),
+              FillOutlineButton(press: () {}, text: "Mensagem recente"),
               SizedBox(width: kDefaultPadding),
               FillOutlineButton(
                 press: () {},
-                text: "Active",
+                text: "Ativo",
                 isFilled: false,
               ),
             ],
@@ -44,4 +47,12 @@ class Body extends StatelessWidget {
       ],
     );
   }
+}
+
+Container greenBar() {
+  return Container(
+    padding: EdgeInsets.fromLTRB(
+        kDefaultPadding, 0, kDefaultPadding, kDefaultPadding),
+    color: kPrimaryColor,
+  );
 }

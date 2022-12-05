@@ -1,3 +1,5 @@
+import 'package:apd/constants.dart';
+import 'package:apd/screens/chats/chats_screen.dart';
 import 'package:apd/screens/home_page/Avaliation_button.dart';
 import 'package:apd/screens/onBoarding/transicao.dart';
 import 'package:flutter/material.dart';
@@ -12,15 +14,22 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   //Contando paginas
-  int paginaAtual = 0;
   int _selectedItem = 0;
   
+  final screens = [
+    Center(child: Text('Home', style: TextStyle(fontSize: 72))),
+    ChatsScreen(),
+    Center(child: Text('Forum', style: TextStyle(fontSize: 72))),
+    Center(child: Text('Profile', style: TextStyle(fontSize: 72))),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Debug APD"),
+        //title: const Text("Debug APD"),
         automaticallyImplyLeading: false,
+        backgroundColor: kPrimaryColor,
         actions: [
           IconButton(
               icon: const Icon(Icons.logout),
@@ -35,7 +44,9 @@ class _HomePageState extends State<HomePage> {
               }),
         ],
       ),
-      body: const AvaliationButton(),
+
+      body: screens[_selectedItem],
+      // body: const AvaliationButton(),
       bottomNavigationBar: CustomBottomNavigationBar(
         iconList: [
           Icons.home,
@@ -75,7 +86,6 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
 
     _selectedIndex = widget.defaultSelectedIndex;
@@ -125,42 +135,23 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
       ),
     );
   }
-}    
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      // bottomNavigationBar: NavigationBar(
-      //   destinations: const [
-      //     NavigationDestination(icon: Icon(Icons.home), label: ""),
-      //     NavigationDestination(icon: Icon(Icons.message), label: ""),
-      //     NavigationDestination(icon: Icon(Icons.people), label: ""),
-      //     NavigationDestination(icon: Icon(Icons.person), label: ""),
-      //     //NavigationDestination(icon: Icon(Icons.person), label: "Perfil") incluir icone meditação
-      //   ],
-      //   onDestinationSelected: (int index) {
-      //     setState(() {
-      //       paginaAtual = index;
-      //     });
-      //   },
-      //   selectedIndex: paginaAtual,
-      // ),
+// bottomNavigationBar: NavigationBar(
+//   destinations: const [
+//     NavigationDestination(icon: Icon(Icons.home), label: ""),
+//     NavigationDestination(icon: Icon(Icons.message), label: ""),
+//     NavigationDestination(icon: Icon(Icons.people), label: ""),
+//     NavigationDestination(icon: Icon(Icons.person), label: ""),
+//     //NavigationDestination(icon: Icon(Icons.person), label: "Perfil") incluir icone meditação
+//   ],
+//   onDestinationSelected: (int index) {
+//     setState(() {
+//       paginaAtual = index;
+//     });
+//   },
+//   selectedIndex: paginaAtual,
+// ),
 //     );
 //   }
 // }
-

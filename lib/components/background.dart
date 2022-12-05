@@ -6,7 +6,7 @@ class Background extends StatelessWidget {
     Key? key,
     required this.child,
     this.topImage = "images/screenLogin/images/main_top.png",
-    this.bottomImage = "images/screenLogin/images/login_bottom.png",
+    this.bottomImage = "images/screenLogin/images/findes.png",
   }) : super(key: key);
 
   final String topImage, bottomImage;
@@ -29,11 +29,10 @@ class Background extends StatelessWidget {
                 width: 120,
               ),
             ),
-            // Positioned(
-            //   bottom: 0,
-            //   right: 0,
-            //   child: Image.asset(bottomImage, width: 120),
-            // ),
+            Positioned(
+              bottom: 0,
+              child: Image.asset(bottomImage, width: 120),
+            ),
             SafeArea(child: child),
           ],
         ),

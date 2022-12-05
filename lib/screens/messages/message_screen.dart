@@ -17,6 +17,7 @@ class MessagesScreen extends StatelessWidget {
   AppBar buildAppBar() {
     return AppBar(
       automaticallyImplyLeading: false,
+      backgroundColor: Colors.green,
       title: Row(
         children: [
           const BackButton(),
@@ -28,11 +29,11 @@ class MessagesScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: const [
               Text(
-                "Kristin Watson",
+                "José Alencar",
                 style: TextStyle(fontSize: 16),
               ),
               Text(
-                "Active 3m ago",
+                "Ativado a 3m atrás",
                 style: TextStyle(fontSize: 12),
               )
             ],

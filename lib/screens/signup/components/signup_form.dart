@@ -8,10 +8,10 @@ import '../../../constants.dart';
 import '../../login/login_screen.dart';
 
 //Declaração das variaveis
-String loginUPName = '';
-String loginUPLastName = '';
-String loginUPEmail = '';
-String loginUPPwd = '';
+String loginUPName = 'admin';
+String loginUPLastName = 'master';
+String loginUPEmail = 'admin';
+String loginUPPwd = 'admin';
 
 // Configuração do firebase / Entrada de dados
 

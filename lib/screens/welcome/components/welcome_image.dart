@@ -16,12 +16,14 @@ class WelcomeImage extends StatelessWidget {
           "Bem-vindo(a) ao",
           style: TextStyle(
             fontWeight: FontWeight.bold,
-            fontSize: 20.0,
+            fontSize: 15.0,
           ),
         ),
+	SizedBox(height: 10),
         const Text(
           "Assistência Psicologica ao Docente",
-          style: TextStyle(fontWeight: FontWeight.bold),
+          style: TextStyle(
+	    fontSize: 25.0),
         ),
         const SizedBox(height: defaultPadding * 2),
         Row(
@@ -29,8 +31,8 @@ class WelcomeImage extends StatelessWidget {
             const Spacer(),
             Expanded(
               flex: 8,
-                child: SvgPicture.asset(
-                "assets/icons/screenLogin/icons/chat.svg"),         
+              child: Image.asset(
+                  "assets/icons/screenLogin/icons/ImageWelcome.png"),
             ),
             const Spacer(),
           ],

@@ -20,8 +20,9 @@ construirPagina({
         children: [
           Image.asset(
             urlImage,
-            fit: BoxFit.cover,
-            width: double.infinity,
+            //fit: BoxFit.cover,
+            //width: double.infinity,
+            //width: 100,
           ),
           const SizedBox(height: 64),
           Text(
@@ -31,16 +32,18 @@ construirPagina({
               fontSize: 25, // Titulo
               fontWeight: FontWeight.bold,
             ),
+            textAlign: TextAlign.justify,
           ),
-          const SizedBox(height: 24), // O padrão é 24
+          const SizedBox(height: 35), // O padrão é 24
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 10.0),
+            padding: const EdgeInsets.symmetric(horizontal: 50.0),
             child: Text(
               subtitle,
               style: const TextStyle(
                 color: Colors.black26,
-                fontSize: 15,
+                fontSize: 20,
               ),
+              textAlign: TextAlign.justify,
             ),
           ),
         ],
@@ -75,23 +78,23 @@ class _onBoardingState extends State<onBoarding> {
           },
           children: [
             construirPagina(
-                color: Colors.green.shade100,
+                color: Color.fromARGB(255, 247, 218, 164),
                 urlImage: 'assets/transition/page1.png',
-                title: 'O que oferecemos?',
+                title: 'O QUE OFERECEMOS?',
                 subtitle:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '),
+                    'Temos equipes de profissionais na àrea de psicologica dispostas a atender a demanda de professores via chat, video ou chamada. Cada sessão é agendada pelo docente pelo nosso App, podendo, se ele quiser, marcar sessões presenciais em nossas clinicas psicologicas conveniadas.'),
             construirPagina(
                 color: Colors.blue.shade100,
                 urlImage: 'assets/transition/page2.png',
-                title: 'Qual o diferencial?',
+                title: 'QUAL O NOSSO OBJETIVO?',
                 subtitle:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '),
+                    'Propor apoio aos docentes vinculados à plataforma, com o apoio de um psicologo online ou presencial.  com outros professores'),
             construirPagina(
                 color: Colors.green.shade100,
                 urlImage: 'assets/transition/page3.png',
-                title: 'Nosso objetivo',
+                title: 'COMO O APP PODE LHE AJUDAR?',
                 subtitle:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '),
+                    'O aplicativo oferece serviços de maneira intuitiva e simples. Aqui você pode agendar suas sessões presenciais ou remotas, e se quiser, interagir com outros docentes. Estamos comprometidos a seguir a conduta ética, respeitando sua privacidade.'),
           ],
         ),
       ),

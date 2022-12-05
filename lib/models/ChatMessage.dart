@@ -1,4 +1,8 @@
+
+import 'package:apd/screens/signup/components/signup_form.dart';
+
 enum ChatMessageType { text, audio, image, video }
+
 enum MessageStatus { not_sent, not_view, viewed }
 
 class ChatMessage {
@@ -17,13 +21,13 @@ class ChatMessage {
 
 List demeChatMessages = [
   ChatMessage(
-    text: "Hi Sajol,",
+    text: "Olá, ${loginUPName}, nossa sessão já começou. Como estão as coisas no seu trabalho?",
     messageType: ChatMessageType.text,
     messageStatus: MessageStatus.viewed,
     isSender: false,
   ),
   ChatMessage(
-    text: "Hello, How are you?",
+    text: "Olá Doutor, estão bem, e você como vai?",
     messageType: ChatMessageType.text,
     messageStatus: MessageStatus.viewed,
     isSender: true,
