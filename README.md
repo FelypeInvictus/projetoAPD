@@ -20,3 +20,4 @@ Caio
 **ESTRUTURA DE ARQUIVOS:**
 
 [POR FAZER]
+# apdTestFirebaseAuth
