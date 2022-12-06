@@ -5,6 +5,8 @@ import 'package:apd/screens/onBoarding/transicao.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'tabs/HomeTab.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -17,7 +19,7 @@ class _HomePageState extends State<HomePage> {
   int _selectedItem = 0;
   
   final screens = [
-    Center(child: Text('Home', style: TextStyle(fontSize: 72))),
+    HomeTab(),
     ChatsScreen(),
     Center(child: Text('Forum', style: TextStyle(fontSize: 72))),
     Center(child: Text('Profile', style: TextStyle(fontSize: 72))),
