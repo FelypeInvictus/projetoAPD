@@ -21,7 +21,7 @@ class ChatMessage {
 
 List demeChatMessages = [
   ChatMessage(
-    text: "Olá, ${loginUPName}, nossa sessão já começou. Como estão as coisas no seu trabalho?",
+    text: "Olá, ${loginUPName}, nossa sessão já começou.\nComo estão as coisas no seu trabalho?",
     messageType: ChatMessageType.text,
     messageStatus: MessageStatus.viewed,
     isSender: false,

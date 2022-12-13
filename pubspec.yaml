@@ -60,5 +60,8 @@ flutter:
     - assets/images/
     - assets/images/screenLogin/images/
     - assets/screen_splash/
+    - assets/quick_checking_emotions/icons/
+    - assets/profile/doctors/
+    - assets/profile/user/
 
  

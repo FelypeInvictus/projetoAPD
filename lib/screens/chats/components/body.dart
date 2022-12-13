@@ -1,6 +1,6 @@
 import 'package:apd/components/filled_outline_button.dart';
 import 'package:apd/constants.dart';
-import 'package:apd/models/Chat.dart';
+import 'package:apd/models/chat.dart';
 import 'package:apd/screens/messages/message_screen.dart';
 import 'package:flutter/material.dart';
 

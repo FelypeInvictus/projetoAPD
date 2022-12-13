@@ -188,10 +188,11 @@
 //                                               width: 2,
 //                                             ),
 //                                           ),
-//                                           child: FlutterFlowIconButton(
+//                                           child: IconButton(
 //                                             borderColor: Colors.transparent,
 //                                             borderRadius: 30,
-//                                             buttonSize: 46,
+                                            
+//                                             iconSize: 46,
 //                                             icon: Icon(
 //                                               Icons.edit_outlined,
 //                                               color:

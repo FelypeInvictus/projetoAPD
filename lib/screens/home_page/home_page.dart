@@ -1,11 +1,11 @@
 import 'package:apd/constants.dart';
 import 'package:apd/screens/chats/chats_screen.dart';
-import 'package:apd/screens/home_page/Avaliation_button.dart';
+import 'package:apd/screens/home_page/avaliation_button.dart';
 import 'package:apd/screens/onBoarding/transicao.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'tabs/HomeTab.dart';
+import 'tabs/home_tab.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -47,7 +47,7 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
 
-      body: screens[_selectedItem],
+      body: SafeArea(child: screens[_selectedItem]),
       // body: const AvaliationButton(),
       bottomNavigationBar: CustomBottomNavigationBar(
         iconList: [
