@@ -78,9 +78,9 @@ class HomeTab extends StatelessWidget {
         SizedBox(
           height: 20,
         ),
-        // AppointmentCard(
+        AppointmentCard(
         //   onTap: onPressedScheduleCard,
-        // ),
+        ),
         // AppointmentCard(onTap: onPressedScheduleCard),
         SizedBox(
           height: 20,
@@ -118,10 +118,8 @@ class QuickCheckingEmotions extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 42),
-      child: Container(
-        height: 210,
+    return  Container(
+        height: 150,
 	      width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
@@ -135,32 +133,28 @@ class QuickCheckingEmotions extends StatelessWidget {
             )),
 
         //Inserir emoticons
-          child: Scaffold( // Caso dê merda, mude para material
-            //color: Colors.transparent,
+          child: Material( // Caso dê merda, mude para material
+            color: Colors.transparent,
             
             // child: Padding(
               
               //padding: const EdgeInsets.all(30),
-              //padding: const EdgeInsets.symmetric(horizontal: 45),
-              body: ListView(
-                padding: const EdgeInsets.all(30),
+             
+              child: ListView(
+                padding: const EdgeInsets.all(20),
                 children: [
                   Text('Como você está se sentindo hoje?',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Color.fromARGB(255,255,250,250),
-                    fontSize: 20,
-
+                    fontSize: 15,
                     ),
-
                   ),
                   SizedBox(height: 20),
                   Column(
-                    
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Row(
-                       
+                      Row(                   
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           IconButton(
@@ -206,84 +200,82 @@ class QuickCheckingEmotions extends StatelessWidget {
                           ),
                         ],
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: const [
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(0, 0, 50, 0),
-                            child: Text(
-                              'Doente',
-                              style: TextStyle(
-                                color: Color.fromARGB(255, 255, 250, 250),
-                                fontSize: 15,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(0, 0, 55, 0),
-                            child: Text(
-                              'Feliz',
-                              style: TextStyle(
-                                color: Color.fromARGB(255, 255, 250, 250),
-                                fontSize: 15,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(0, 0, 55, 0),
-                            child: Text(
-                              'Raiva',
-                              style: TextStyle(
-                                color: Color.fromARGB(255, 255, 250, 250),
-                                fontSize: 15,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(0, 0, 35, 0),
-                            child: Text(
-                              'Nao sei',
-                              style: TextStyle(
-                                color: Color.fromARGB(255, 255, 250, 250),
-                                fontSize: 15,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                            child: Text(
-                              'Triste',
-                              style: TextStyle(
-                                color: Color.fromARGB(255, 255, 250, 250),
-                                fontSize: 15,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
+                      // Row(
+                      //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      //   children: const [
+                      //     Padding(
+                      //       padding: EdgeInsets.fromLTRB(0, 0, 50, 0),
+                      //       child: Text(
+                      //         'Doente',
+                      //         style: TextStyle(
+                      //           color: Color.fromARGB(255, 255, 250, 250),
+                      //           fontSize: 15,
+                      //           fontWeight: FontWeight.bold,
+                      //         ),
+                      //       ),
+                      //     ),
+                      //     Padding(
+                      //       padding: EdgeInsets.fromLTRB(0, 0, 55, 0),
+                      //       child: Text(
+                      //         'Feliz',
+                      //         style: TextStyle(
+                      //           color: Color.fromARGB(255, 255, 250, 250),
+                      //           fontSize: 15,
+                      //           fontWeight: FontWeight.bold,
+                      //         ),
+                      //       ),
+                      //     ),
+                      //     Padding(
+                      //       padding: EdgeInsets.fromLTRB(0, 0, 55, 0),
+                      //       child: Text(
+                      //         'Raiva',
+                      //         style: TextStyle(
+                      //           color: Color.fromARGB(255, 255, 250, 250),
+                      //           fontSize: 15,
+                      //           fontWeight: FontWeight.bold,
+                      //         ),
+                      //       ),
+                      //     ),
+                      //     Padding(
+                      //       padding: EdgeInsets.fromLTRB(0, 0, 35, 0),
+                      //       child: Text(
+                      //         'Nao sei',
+                      //         style: TextStyle(
+                      //           color: Color.fromARGB(255, 255, 250, 250),
+                      //           fontSize: 15,
+                      //           fontWeight: FontWeight.bold,
+                      //         ),
+                      //       ),
+                      //     ),
+                      //     Padding(
+                      //       padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                      //       child: Text(
+                      //         'Triste',
+                      //         style: TextStyle(
+                      //           color: Color.fromARGB(255, 255, 250, 250),
+                      //           fontSize: 15,
+                      //           fontWeight: FontWeight.bold,
+                      //         ),
+                      //       ),
+                      //     ),
+                      //   ],
+                      // ),
                     ],
                   ),
                 ],
               ),
             ),
           // ),
-      
-      ),
     );
   }
 }
 
 class AppointmentCard extends StatelessWidget {
-  final void Function() onTap;
+  // final void Function() onTap;
 
   const AppointmentCard({
     Key? key,
-    required this.onTap,
+    // required this.onTap,
   }) : super(key: key);
 
   @override
@@ -298,9 +290,7 @@ class AppointmentCard extends StatelessWidget {
           ),
           child: Material(
             color: Colors.transparent,
-            child: InkWell(
-              onTap: onTap,
-              child: Padding(
+            child: Padding(
                 padding: const EdgeInsets.all(20),
                 child: Column(
                   children: [
@@ -339,11 +329,10 @@ class AppointmentCard extends StatelessWidget {
               ),
             ),
           ),
-        ),
         Container(
           margin: EdgeInsets.symmetric(horizontal: 20),
           width: double.infinity,
-          height: 10,
+          height: 5,
           decoration: BoxDecoration(
             color: Color(MyColors.bg02),
             borderRadius: BorderRadius.only(
@@ -352,18 +341,18 @@ class AppointmentCard extends StatelessWidget {
             ),
           ),
         ),
-        Container(
-          margin: EdgeInsets.symmetric(horizontal: 40),
-          width: double.infinity,
-          height: 10,
-          decoration: BoxDecoration(
-            color: Color(MyColors.bg03),
-            borderRadius: BorderRadius.only(
-              bottomRight: Radius.circular(10),
-              bottomLeft: Radius.circular(10),
-            ),
-          ),
-        ),
+        // Container(
+        //   margin: EdgeInsets.symmetric(horizontal: 40),
+        //   width: double.infinity,
+        //   height: 20,
+        //   decoration: BoxDecoration(
+        //     color: Color(MyColors.bg03),
+        //     borderRadius: BorderRadius.only(
+        //       bottomRight: Radius.circular(10),
+        //       bottomLeft: Radius.circular(10),
+        //     ),
+        //   ),
+        // ),
       ],
     );
   }
@@ -378,7 +367,7 @@ class ScheduleCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Color(MyColors.bg01),
+        color:Colors.amber, 
         borderRadius: BorderRadius.circular(10),
       ),
       width: double.infinity,
@@ -395,7 +384,7 @@ class ScheduleCard extends StatelessWidget {
             width: 5,
           ),
           Text(
-            'Mon, July 29',
+            'Seg, Jan 29',
             style: TextStyle(color: Colors.white),
           ),
           SizedBox(
