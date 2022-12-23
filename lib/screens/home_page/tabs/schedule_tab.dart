@@ -3,6 +3,26 @@ import 'package:flutter/material.dart';
 import 'styles/colors.dart';
 import 'styles/styles.dart';
 
+class Schedule extends StatelessWidget {
+  const Schedule({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        backgroundColor: Colors.green,
+        title: Column(
+          children: [
+            const BackButton(),
+            //ScheduleTab(),
+          ],
+        ),
+      ),
+      body: ScheduleTab(),
+    );
+  }
+}
 
 class ScheduleTab extends StatefulWidget {
   const ScheduleTab({Key? key}) : super(key: key);
@@ -11,61 +31,61 @@ class ScheduleTab extends StatefulWidget {
   State<ScheduleTab> createState() => _ScheduleTabState();
 }
 
-enum FilterStatus { Upcoming, Complete, Cancel }
+enum FilterStatus { Agendados, Completos, Cancelados }
 
 List<Map> schedules = [
   {
     'img': 'assets/doctor01.jpeg',
-    'doctorName': 'Dr. Anastasya Syahid',
+    'doctorName': 'Dra. Natasha Silva',
     'doctorTitle': 'Dental Specialist',
-    'reservedDate': 'Monday, Aug 29',
+    'reservedDate': 'Segunda-feira, Aug 29',
     'reservedTime': '11:00 - 12:00',
-    'status': FilterStatus.Upcoming
+    'status': FilterStatus.Agendados
   },
   {
     'img': 'assets/doctor02.png',
-    'doctorName': 'Dr. Mauldya Imran',
+    'doctorName': 'Dr. Marcos Pereira',
     'doctorTitle': 'Skin Specialist',
-    'reservedDate': 'Monday, Sep 29',
+    'reservedDate': 'Segunda-feira, Sep 29',
     'reservedTime': '11:00 - 12:00',
-    'status': FilterStatus.Upcoming
+    'status': FilterStatus.Agendados
   },
   {
     'img': 'assets/doctor03.jpeg',
-    'doctorName': 'Dr. Rihanna Garland',
+    'doctorName': 'Dra. Ana Paula',
     'doctorTitle': 'General Specialist',
-    'reservedDate': 'Monday, Jul 29',
+    'reservedDate': 'Segunda-feira, Jul 29',
     'reservedTime': '11:00 - 12:00',
-    'status': FilterStatus.Upcoming
+    'status': FilterStatus.Agendados
   },
   {
     'img': 'assets/doctor04.jpeg',
-    'doctorName': 'Dr. John Doe',
+    'doctorName': 'Dr. Pedro Rosa',
     'doctorTitle': 'Something Specialist',
-    'reservedDate': 'Monday, Jul 29',
+    'reservedDate': 'Segunda-feira, Jul 29',
     'reservedTime': '11:00 - 12:00',
-    'status': FilterStatus.Complete
+    'status': FilterStatus.Completos
   },
   {
     'img': 'assets/doctor05.jpeg',
-    'doctorName': 'Dr. Sam Smithh',
+    'doctorName': 'Dr. Carlos Junior',
     'doctorTitle': 'Other Specialist',
-    'reservedDate': 'Monday, Jul 29',
+    'reservedDate': 'Segunda-feira, Jul 29',
     'reservedTime': '11:00 - 12:00',
-    'status': FilterStatus.Cancel
+    'status': FilterStatus.Cancelados
   },
   {
     'img': 'assets/doctor05.jpeg',
-    'doctorName': 'Dr. Sam Smithh',
+    'doctorName': 'Dra. Camila Vieira',
     'doctorTitle': 'Other Specialist',
-    'reservedDate': 'Monday, Jul 29',
+    'reservedDate': 'Segunda-feira, Jul 29',
     'reservedTime': '11:00 - 12:00',
-    'status': FilterStatus.Cancel
+    'status': FilterStatus.Cancelados
   },
 ];
 
 class _ScheduleTabState extends State<ScheduleTab> {
-  FilterStatus status = FilterStatus.Upcoming;
+  FilterStatus status = FilterStatus.Agendados;
   Alignment _alignment = Alignment.centerLeft;
 
   @override
@@ -81,7 +101,7 @@ class _ScheduleTabState extends State<ScheduleTab> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Text(
-              'Schedule',
+              'Agendamentos',
               textAlign: TextAlign.center,
               style: kTitleStyle,
             ),
@@ -105,16 +125,16 @@ class _ScheduleTabState extends State<ScheduleTab> {
                           child: GestureDetector(
                             onTap: () {
                               setState(() {
-                                if (filterStatus == FilterStatus.Upcoming) {
-                                  status = FilterStatus.Upcoming;
+                                if (filterStatus == FilterStatus.Agendados) {
+                                  status = FilterStatus.Agendados;
                                   _alignment = Alignment.centerLeft;
                                 } else if (filterStatus ==
-                                    FilterStatus.Complete) {
-                                  status = FilterStatus.Complete;
+                                    FilterStatus.Completos) {
+                                  status = FilterStatus.Completos;
                                   _alignment = Alignment.center;
                                 } else if (filterStatus ==
-                                    FilterStatus.Cancel) {
-                                  status = FilterStatus.Cancel;
+                                    FilterStatus.Cancelados) {
+                                  status = FilterStatus.Cancelados;
                                   _alignment = Alignment.centerRight;
                                 }
                               });
@@ -134,11 +154,11 @@ class _ScheduleTabState extends State<ScheduleTab> {
                   duration: Duration(milliseconds: 200),
                   alignment: _alignment,
                   child: Container(
-                    width: 100,
+                    width: 110,
                     height: 40,
                     decoration: BoxDecoration(
-                      color: Color(MyColors.primary),
-                      borderRadius: BorderRadius.circular(20),
+                      color: Colors.green,
+                      borderRadius: BorderRadius.circular(5),
                     ),
                     child: Center(
                       child: Text(
@@ -216,8 +236,10 @@ class _ScheduleTabState extends State<ScheduleTab> {
                             children: [
                               Expanded(
                                 child: OutlinedButton(
-                                  child: Text('Cancel'),
-                                  onPressed: () {},
+                                  child: Text('Cancelar'),
+                                  onPressed: () {
+                                    print('O botão foi pressionado');
+                                  },
                                 ),
                               ),
                               SizedBox(
@@ -225,10 +247,18 @@ class _ScheduleTabState extends State<ScheduleTab> {
                               ),
                               Expanded(
                                 child: ElevatedButton(
-                                  child: Text('Reschedule'),
+                                  child: Text('Reagendar'),
                                   onPressed: () => {},
+                                  //A estilização desse botão teve que ser manual
+                                  style: ElevatedButton.styleFrom(
+                                    shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(5),
+                                  ),
+                                  maximumSize:  Size(double.infinity,36),
+                                  minimumSize:  Size(double.infinity,36),
                                 ),
-                              )
+                              ),
+                              ),
                             ],
                           )
                         ],

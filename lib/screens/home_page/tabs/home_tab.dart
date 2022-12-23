@@ -1,4 +1,9 @@
+import 'package:apd/constants.dart';
+
+import 'package:apd/screens/chats/chats_screen.dart';
+import 'package:apd/screens/home_page/tabs/schedule_tab.dart';
 import 'package:apd/screens/signup/components/signup_form.dart';
+import 'package:apd/screens/welcome/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'styles/colors.dart';
@@ -54,7 +59,7 @@ class HomeTab extends StatelessWidget {
         QuickCheckingEmotions(),
         //CategoryIcons(),
         SizedBox(
-          height: 20,
+          height: 50,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -71,24 +76,35 @@ class HomeTab extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              onPressed: () {},
+              onPressed: () async {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return const Schedule();
+                    },
+                  ),
+                );
+              },
             )
           ],
         ),
         SizedBox(
-          height: 20,
+          height: 30,
         ),
         AppointmentCard(
-        //   onTap: onPressedScheduleCard,
-        ),
+            //   onTap: onPressedScheduleCard,
+            ),
         // AppointmentCard(onTap: onPressedScheduleCard),
-        SizedBox(
-          height: 20,
-        ),
 
+        
         SizedBox(
-          height: 20,
+          height: 80,
         ),
+buttonAgendamentos(),
+        // SizedBox(
+        //   height: 20,
+        // ),
       ],
     );
   }
@@ -118,154 +134,89 @@ class QuickCheckingEmotions extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Container(
-        height: 150,
-	      width: MediaQuery.of(context).size.width,
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
-            gradient: LinearGradient(
-              begin: Alignment.topRight,
-              end: Alignment.bottomLeft,
-              colors: const [
-                Color.fromARGB(255, 16, 214, 188),
-                Colors.blue,
-              ],
-            )),
+    return Container(
+      padding: EdgeInsets.all(20),
+      height: 150,
+      //width: MediaQuery.of(context).size.width,
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          gradient: LinearGradient(
+            begin: Alignment.topRight,
+            end: Alignment.bottomLeft,
+            colors: const [
+              Color.fromARGB(255, 16, 214, 188),
+              Colors.blue,
+            ],
+          )),
 
-        //Inserir emoticons
-          child: Material( // Caso dê merda, mude para material
-            color: Colors.transparent,
-            
-            // child: Padding(
-              
-              //padding: const EdgeInsets.all(30),
-             
-              child: ListView(
-                padding: const EdgeInsets.all(20),
-                children: [
-                  Text('Como você está se sentindo hoje?',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Color.fromARGB(255,255,250,250),
-                    fontSize: 15,
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Row(                   
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          IconButton(
-                            iconSize: 20,
-                            onPressed: () => (print("doente")),
-                            icon: CircleAvatar(
-                              backgroundImage: AssetImage(
-                                  'assets/quick_checking_emotions/icons/doente.png'),
-                            ),
-                          ),
-                          IconButton(
-                            iconSize: 20,
-                            onPressed: () => (print("feliz")),
-                            icon: CircleAvatar(
-                              backgroundImage: AssetImage(
-                                  'assets/quick_checking_emotions/icons/contente.png'),
-                            ),
-                          ),
-                          IconButton(
-                            iconSize: 20,
-                            onPressed: () => (print("aborecido")),
-                            icon: CircleAvatar(
-                              backgroundImage: AssetImage(
-                                  'assets/quick_checking_emotions/icons/aborrecido.png'),
-                            ),
-                          ),
-                          IconButton(
-                            iconSize: 20,
-                            onPressed: () => (print("Não sabe")),
-                            icon: CircleAvatar(
-                              backgroundImage: AssetImage(
-                                  'assets/quick_checking_emotions/icons/nao_sabe.png'),
-                            ),
-                          ),
-                          IconButton(
-                            iconSize: 20,
-                            onPressed: () => (print("triste")),
-                            icon: CircleAvatar(
-                              radius: 50,
-                              backgroundImage: AssetImage(
-                                  'assets/quick_checking_emotions/icons/triste.png'),
-                            ),
-                          ),
-                        ],
-                      ),
-                      // Row(
-                      //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      //   children: const [
-                      //     Padding(
-                      //       padding: EdgeInsets.fromLTRB(0, 0, 50, 0),
-                      //       child: Text(
-                      //         'Doente',
-                      //         style: TextStyle(
-                      //           color: Color.fromARGB(255, 255, 250, 250),
-                      //           fontSize: 15,
-                      //           fontWeight: FontWeight.bold,
-                      //         ),
-                      //       ),
-                      //     ),
-                      //     Padding(
-                      //       padding: EdgeInsets.fromLTRB(0, 0, 55, 0),
-                      //       child: Text(
-                      //         'Feliz',
-                      //         style: TextStyle(
-                      //           color: Color.fromARGB(255, 255, 250, 250),
-                      //           fontSize: 15,
-                      //           fontWeight: FontWeight.bold,
-                      //         ),
-                      //       ),
-                      //     ),
-                      //     Padding(
-                      //       padding: EdgeInsets.fromLTRB(0, 0, 55, 0),
-                      //       child: Text(
-                      //         'Raiva',
-                      //         style: TextStyle(
-                      //           color: Color.fromARGB(255, 255, 250, 250),
-                      //           fontSize: 15,
-                      //           fontWeight: FontWeight.bold,
-                      //         ),
-                      //       ),
-                      //     ),
-                      //     Padding(
-                      //       padding: EdgeInsets.fromLTRB(0, 0, 35, 0),
-                      //       child: Text(
-                      //         'Nao sei',
-                      //         style: TextStyle(
-                      //           color: Color.fromARGB(255, 255, 250, 250),
-                      //           fontSize: 15,
-                      //           fontWeight: FontWeight.bold,
-                      //         ),
-                      //       ),
-                      //     ),
-                      //     Padding(
-                      //       padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                      //       child: Text(
-                      //         'Triste',
-                      //         style: TextStyle(
-                      //           color: Color.fromARGB(255, 255, 250, 250),
-                      //           fontSize: 15,
-                      //           fontWeight: FontWeight.bold,
-                      //         ),
-                      //       ),
-                      //     ),
-                      //   ],
-                      // ),
-                    ],
-                  ),
-                ],
+      //Inserir emoticons
+      child: Material(
+        color: Colors.transparent,
+        child: ListView(
+          padding: const EdgeInsets.all(20),
+          children: [
+            Text(
+              'Como você está se sentindo hoje?',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Color.fromARGB(255, 255, 250, 250),
+                fontSize: 15,
               ),
             ),
-          // ),
+            SizedBox(height: 20),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    IconButton(
+                      iconSize: 20,
+                      onPressed: () => (print("doente")),
+                      icon: CircleAvatar(
+                        backgroundImage: AssetImage(
+                            'assets/quick_checking_emotions/icons/doente.png'),
+                      ),
+                    ),
+                    IconButton(
+                      iconSize: 20,
+                      onPressed: () => (print("feliz")),
+                      icon: CircleAvatar(
+                        backgroundImage: AssetImage(
+                            'assets/quick_checking_emotions/icons/contente.png'),
+                      ),
+                    ),
+                    IconButton(
+                      iconSize: 20,
+                      onPressed: () => (print("aborecido")),
+                      icon: CircleAvatar(
+                        backgroundImage: AssetImage(
+                            'assets/quick_checking_emotions/icons/aborrecido.png'),
+                      ),
+                    ),
+                    IconButton(
+                      iconSize: 20,
+                      onPressed: () => (print("Não sabe")),
+                      icon: CircleAvatar(
+                        backgroundImage: AssetImage(
+                            'assets/quick_checking_emotions/icons/nao_sabe.png'),
+                      ),
+                    ),
+                    IconButton(
+                      iconSize: 20,
+                      onPressed: () => (print("triste")),
+                      icon: CircleAvatar(
+                        backgroundImage: AssetImage(
+                            'assets/quick_checking_emotions/icons/triste.png'),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ],
+        ),
+    ),
     );
   }
 }
@@ -285,50 +236,52 @@ class AppointmentCard extends StatelessWidget {
         Container(
           width: double.infinity,
           decoration: BoxDecoration(
-            color: Color(MyColors.green),
+            color: Color.fromARGB(255, 224, 230, 218),
             borderRadius: BorderRadius.circular(10),
           ),
           child: Material(
             color: Colors.transparent,
             child: Padding(
-                padding: const EdgeInsets.all(20),
-                child: Column(
-                  children: [
-                    Row(
-                      children: [
-                        CircleAvatar(
-                          backgroundImage: AssetImage(
-                              'assets/profile/doctors/doctor01.jpeg'),
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text('Dr.Carlos Moreira',
-                                style: TextStyle(color: Colors.white)),
-                            SizedBox(
-                              height: 2,
-                            ),
-                            Text(
-                              'Psicologo',
-                              style: TextStyle(color: Color(MyColors.text01)),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    ScheduleCard(),
-                  ],
-                ),
+              padding: const EdgeInsets.all(20),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      CircleAvatar(
+                        backgroundImage:
+                            AssetImage('assets/profile/doctors/doctor01.jpeg'),
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('Dr.Carlos Moreira',
+                              style: TextStyle(color: Colors.black)),
+                          SizedBox(
+                            height: 2,
+                          ),
+                          Text(
+                            'Psicologo',
+                            style: TextStyle(color: Colors.black,
+                          ),
+                          ),
+                        ],
+                  
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  ScheduleCard(),
+                ],
               ),
             ),
           ),
+        ),
         Container(
           margin: EdgeInsets.symmetric(horizontal: 20),
           width: double.infinity,
@@ -367,7 +320,7 @@ class ScheduleCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color:Colors.amber, 
+        color: kPrimaryColor,
         borderRadius: BorderRadius.circular(10),
       ),
       width: double.infinity,
@@ -410,53 +363,103 @@ class ScheduleCard extends StatelessWidget {
   }
 }
 
-class CategoryIcon extends StatelessWidget {
-  IconData icon;
-  String text;
 
-  CategoryIcon({
-    required this.icon,
-    required this.text,
-  });
+class buttonAgendamentos extends StatefulWidget {
+  const buttonAgendamentos({super.key});
 
+  @override
+  State<buttonAgendamentos> createState() => _buttonAgendamentosState();
+}
+
+class _buttonAgendamentosState extends State<buttonAgendamentos> {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      splashColor: Color(MyColors.bg01),
-      onTap: () {},
-      child: Padding(
-        padding: const EdgeInsets.all(4.0),
-        child: Column(
-          children: [
-            Container(
-              width: 50,
-              height: 50,
-              decoration: BoxDecoration(
-                color: Color(MyColors.bg),
-                borderRadius: BorderRadius.circular(50),
-              ),
-              child: Icon(
-                icon,
-                color: Color(MyColors.primary),
-              ),
+      splashColor: Colors.greenAccent,
+      // Fazer tela de agendamentos!
+      // onTap: () async {
+      //                           await Navigator.push(
+      //                             context,
+      //                             MaterialPageRoute(
+      //                               builder: (context) =>
+      //                                   WelcomeScreen()),
+      //                             );
+                                
+      //                         },
+    child: Center(
+      child: Container(
+        height: 150,
+        width: 300,
+        //width: double.infinity,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          gradient: LinearGradient(
+            begin: Alignment.topRight,
+            end: Alignment.bottomLeft,
+            colors: const [
+              Color.fromARGB(255, 194, 255, 195),
+              Color.fromARGB(255, 55, 254, 65),
+            ],
+          )),
+          child: Center(
+            child: Text('AGENDAR', 
+            style: TextStyle(color: Colors.white, fontSize: 30,)
+            ,
             ),
-            SizedBox(
-              height: 10,
-            ),
-            Text(
-              text,
-              style: TextStyle(
-                color: Color(MyColors.primary),
-                fontSize: 12,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-          ],
-        ),
+       ),
       ),
+    ),
     );
   }
 }
+
+// class CategoryIcon extends StatelessWidget {
+//   IconData icon;
+//   String text;
+
+//   CategoryIcon({
+//     required this.icon,
+//     required this.text,
+//   });
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return InkWell(
+//       splashColor: Color(MyColors.bg01),
+//       onTap: () {},
+//       child: Padding(
+//         padding: const EdgeInsets.all(4.0),
+//         child: Column(
+//           children: [
+//             Container(
+//               width: 50,
+//               height: 50,
+//               decoration: BoxDecoration(
+//                 color: Color(MyColors.bg),
+//                 borderRadius: BorderRadius.circular(50),
+//               ),
+//               child: Icon(
+//                 icon,
+//                 color: Color(MyColors.primary),
+//               ),
+//             ),
+//             SizedBox(
+//               height: 10,
+//             ),
+//             Text(
+//               text,
+//               style: TextStyle(
+//                 color: Color(MyColors.primary),
+//                 fontSize: 12,
+//                 fontWeight: FontWeight.w600,
+//               ),
+//             ),
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
 
 class UserIntro extends StatelessWidget {
   const UserIntro({
@@ -489,8 +492,6 @@ class UserIntro extends StatelessWidget {
             Text(
               'Olá,',
               style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15),
-              
-              
             ),
             Text(
               '${loginUPName} ${loginUPLastName} 👋'.toUpperCase(),
@@ -519,14 +520,14 @@ class UserIntro extends StatelessWidget {
 //                     ),
 //                   );
 
-construirTextoEmotions({
-  required String text,
-}) =>
-    Text(
-      text,
-      style: TextStyle(
-        color: Color.fromARGB(255, 255, 250, 250),
-        fontSize: 15,
-        fontWeight: FontWeight.bold,
-      ),
-    );
+// construirTextoEmotions({
+//   required String text,
+// }) =>
+//     Text(
+//       text,
+//       style: TextStyle(
+//         color: Color.fromARGB(255, 255, 250, 250),
+//         fontSize: 15,
+//         fontWeight: FontWeight.bold,
+//       ),
+//     );

@@ -16,6 +16,13 @@ class LoginAndSignupBtn extends StatelessWidget {
         Hero(
           tag: "login_btn",
           child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+        elevation: 0,
+        backgroundColor: kPrimaryColor,
+        shape: const StadiumBorder(),
+        maximumSize: const Size(double.infinity, 56),
+        minimumSize: const Size(double.infinity, 56),
+              ),
             onPressed: () {
               Navigator.push(
                 context,
@@ -33,6 +40,8 @@ class LoginAndSignupBtn extends StatelessWidget {
         ),
         const SizedBox(height: 16),
         ElevatedButton(
+
+              
           onPressed: () {
             Navigator.push(
               context,

@@ -28,24 +28,24 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        //title: const Text("Debug APD"),
-        automaticallyImplyLeading: false,
-        backgroundColor: kPrimaryColor,
-        actions: [
-          IconButton(
-              icon: const Icon(Icons.logout),
-              onPressed: () async {
-                // Retornar para a tela de transição
-                final prefs = await SharedPreferences.getInstance();
-                prefs.setBool('mostrarTelaPrincipal', false);
+      // appBar: AppBar(
+      //   //title: const Text("Debug APD"),
+      //   automaticallyImplyLeading: false,
+      //   backgroundColor: kPrimaryColor,
+      //   // actions: [
+      //   //   IconButton(
+      //   //       icon: const Icon(Icons.logout),
+      //   //       onPressed: () async {
+      //   //         // Retornar para a tela de transição
+      //   //         final prefs = await SharedPreferences.getInstance();
+      //   //         prefs.setBool('mostrarTelaPrincipal', false);
 
-                Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (context) => onBoarding()),
-                );
-              }),
-        ],
-      ),
+      //   //         Navigator.of(context).pushReplacement(
+      //   //           MaterialPageRoute(builder: (context) => onBoarding()),
+      //   //         );
+      //   //       }),
+      //   // ],
+      // ),
 
       body: SafeArea(child: screens[_selectedItem]),
       // body: const AvaliationButton(),
