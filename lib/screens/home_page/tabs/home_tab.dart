@@ -236,7 +236,7 @@ class AppointmentCard extends StatelessWidget {
         Container(
           width: double.infinity,
           decoration: BoxDecoration(
-            color: Color.fromARGB(255, 224, 230, 218),
+            color: Color.fromARGB(192, 250, 250, 250),
             borderRadius: BorderRadius.circular(10),
           ),
           child: Material(
@@ -388,8 +388,8 @@ class _buttonAgendamentosState extends State<buttonAgendamentos> {
       //                         },
     child: Center(
       child: Container(
-        height: 150,
-        width: 300,
+        height: 100,
+        width: 200,
         //width: double.infinity,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
