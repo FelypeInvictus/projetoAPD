@@ -97,11 +97,10 @@ class HomeTab extends StatelessWidget {
             ),
         // AppointmentCard(onTap: onPressedScheduleCard),
 
-        
         SizedBox(
-          height: 80,
+          height: 50,
         ),
-buttonAgendamentos(),
+        buttonAgendamentos(),
         // SizedBox(
         //   height: 20,
         // ),
@@ -216,7 +215,7 @@ class QuickCheckingEmotions extends StatelessWidget {
             ),
           ],
         ),
-    ),
+      ),
     );
   }
 }
@@ -265,11 +264,11 @@ class AppointmentCard extends StatelessWidget {
                           ),
                           Text(
                             'Psicologo',
-                            style: TextStyle(color: Colors.black,
-                          ),
+                            style: TextStyle(
+                              color: Colors.black,
+                            ),
                           ),
                         ],
-                  
                       ),
                     ],
                   ),
@@ -363,7 +362,6 @@ class ScheduleCard extends StatelessWidget {
   }
 }
 
-
 class buttonAgendamentos extends StatefulWidget {
   const buttonAgendamentos({super.key});
 
@@ -384,31 +382,34 @@ class _buttonAgendamentosState extends State<buttonAgendamentos> {
       //                               builder: (context) =>
       //                                   WelcomeScreen()),
       //                             );
-                                
+
       //                         },
-    child: Center(
-      child: Container(
-        height: 100,
-        width: 200,
-        //width: double.infinity,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
-          gradient: LinearGradient(
-            begin: Alignment.topRight,
-            end: Alignment.bottomLeft,
-            colors: const [
-              Color.fromARGB(255, 194, 255, 195),
-              Color.fromARGB(255, 55, 254, 65),
-            ],
-          )),
+      child: Center(
+        child: Container(
+          height: 100,
+          width: 200,
+          //width: double.infinity,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              gradient: LinearGradient(
+                begin: Alignment.topRight,
+                end: Alignment.bottomLeft,
+                colors: const [
+                  Color.fromARGB(255, 194, 255, 195),
+                  Color.fromARGB(255, 55, 254, 65),
+                ],
+              )),
           child: Center(
-            child: Text('AGENDAR', 
-            style: TextStyle(color: Colors.white, fontSize: 30,)
-            ,
+            child: Text(
+              'AGENDAR',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 30,
+              ),
             ),
-       ),
+          ),
+        ),
       ),
-    ),
     );
   }
 }
