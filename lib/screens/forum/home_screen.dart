@@ -3,7 +3,7 @@ import 'package:apd/screens/forum/widgets/posts.dart';
 import 'package:apd/screens/forum/widgets/top_bar.dart';
 import 'package:apd/screens/signup/components/signup_form.dart';
 import 'package:flutter/material.dart';
-import 'package:themify_flutter/themify_flutter.dart';
+
 
 class HomePageForum extends StatefulWidget {
   @override
@@ -51,7 +51,7 @@ class _HomePageForumState extends State<HomePageForum> {
                           ),
                         ),
                         Icon(
-                          Themify.search,
+                          Icons.search,
                           size: 20,
                           color: Colors.white,
                         )

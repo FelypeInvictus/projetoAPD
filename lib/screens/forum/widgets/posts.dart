@@ -1,6 +1,7 @@
 import 'package:apd/models/forum/post_model.dart';
 import 'package:apd/screens/forum/post_screen.dart';
 import 'package:flutter/material.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:themify_flutter/themify_flutter.dart';
 
 class Posts extends StatefulWidget {
@@ -94,7 +95,7 @@ class _PostsState extends State<Posts> {
                             ],
                           ),
                           Icon(
-                            Themify.bookmark,
+                            Icons.bookmark,
                             color: Colors.grey.withOpacity(0.6),
                             size: 26,
                           )

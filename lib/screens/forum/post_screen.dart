@@ -1,6 +1,6 @@
 import 'package:apd/models/forum/post_model.dart';
 import 'package:flutter/material.dart';
-import 'package:themify_flutter/themify_flutter.dart';
+
 
 class PostScreen extends StatefulWidget {
   @override
@@ -24,7 +24,7 @@ class _PostScreenState extends State<PostScreen> {
                   IconButton(   
                     onPressed: () => Navigator.pop(context),
                     icon: Icon(
-                      Themify.arrow_left,
+                      Icons.arrow_left,
                       size: 20,
                       color: Colors.black,
                     )
@@ -98,7 +98,7 @@ class _PostScreenState extends State<PostScreen> {
                             ],
                           ),
                           Icon(
-                            Themify.bookmark,
+                            Icons.bookmark,
                             color: Colors.grey.withOpacity(0.6),
                             size: 26,
                           ) 
@@ -133,7 +133,7 @@ class _PostScreenState extends State<PostScreen> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: <Widget>[
                               Icon(
-                                Themify.thumb_up,
+                                Icons.thumb_up,
                                 color: Colors.grey.withOpacity(0.5),
                                 size: 22,
                               ),
@@ -151,7 +151,7 @@ class _PostScreenState extends State<PostScreen> {
                           Row(
                             children: <Widget>[
                               Icon(
-                                Themify.eye,
+                                Icons.remove_red_eye,
                                 color: Colors.grey.withOpacity(0.5),
                                 size: 18,
                               ),
@@ -261,7 +261,7 @@ class _PostScreenState extends State<PostScreen> {
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: <Widget>[ 
                             Icon(
-                              Themify.thumb_up, 
+                              Icons.thumb_up, 
                               color: Colors.grey.withOpacity(0.5),
                               size: 20,
                             ), 
