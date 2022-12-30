@@ -1,5 +1,6 @@
 
-import 'package:apd/models/chat_message.dart';
+
+import 'package:apd/models/chat/chat_message.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';

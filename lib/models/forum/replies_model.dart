@@ -1,4 +1,5 @@
-import 'package:forum/models/author_model.dart';
+import 'package:apd/models/forum/author_model.dart';
+
 
 class Reply {
   Author author;
@@ -6,9 +7,9 @@ class Reply {
   int likes;
 
   Reply({
-    this.author,
-    this.content,
-    this.likes
+    required this.author,
+    required this.content,
+    required this.likes
   });
 }
 

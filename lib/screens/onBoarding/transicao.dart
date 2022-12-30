@@ -1,4 +1,4 @@
-import 'package:apd/screens/home_page/home_page.dart';
+import 'package:apd/screens/home/home_page.dart';
 import 'package:apd/screens/messages/message_screen.dart';
 import 'package:apd/screens/welcome/welcome_screen.dart';
 import 'package:flutter/material.dart';

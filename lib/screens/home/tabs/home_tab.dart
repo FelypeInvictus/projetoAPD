@@ -1,7 +1,7 @@
 import 'package:apd/constants.dart';
 
 import 'package:apd/screens/chats/chats_screen.dart';
-import 'package:apd/screens/home_page/tabs/schedule_tab.dart';
+import 'package:apd/screens/home/tabs/schedule_tab.dart';
 import 'package:apd/screens/signup/components/signup_form.dart';
 import 'package:apd/screens/welcome/welcome_screen.dart';
 import 'package:flutter/material.dart';

@@ -1,4 +1,4 @@
-import 'package:apd/screens/home_page/home_page.dart';
+import 'package:apd/screens/home/home_page.dart';
 import 'package:apd/screens/signup/components/signup_form.dart';
 import 'package:apd/screens/signup/signup_screen.dart';
 import 'package:apd/screens/onBoarding/transicao.dart';

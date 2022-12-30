@@ -1,11 +1,11 @@
+import 'package:apd/models/forum/post_model.dart';
 import 'package:flutter/material.dart';
-import 'package:forum/models/post_model.dart';
 import 'package:themify_flutter/themify_flutter.dart';
 
 class PostScreen extends StatefulWidget {
   @override
   final Question question;
-  PostScreen({this.question});
+  PostScreen({required this.question});
   _PostScreenState createState() => _PostScreenState();
 }
 

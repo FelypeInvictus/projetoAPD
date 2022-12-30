@@ -5,12 +5,12 @@ import 'package:apd/screens/signup/components/signup_form.dart';
 import 'package:flutter/material.dart';
 import 'package:themify_flutter/themify_flutter.dart';
 
-class HomePage extends StatefulWidget {
+class HomePageForum extends StatefulWidget {
   @override
-  _HomePageState createState() => _HomePageState();
+  _HomePageForumState createState() => _HomePageForumState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageForumState extends State<HomePageForum> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

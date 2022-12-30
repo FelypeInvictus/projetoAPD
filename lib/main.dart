@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:apd/components/theme.dart';
 import 'package:apd/constants.dart';
-import 'package:apd/screens/home_page/home_page.dart';
+import 'package:apd/screens/home/home_page.dart';
 import 'package:apd/screens/onBoarding/transicao.dart';
 import 'package:apd/screens/welcome/welcome_screen.dart';
 import 'package:flutter/material.dart';
