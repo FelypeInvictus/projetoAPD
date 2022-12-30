@@ -1,5 +1,6 @@
 import 'package:apd/constants.dart';
 import 'package:apd/screens/chats/chats_screen.dart';
+import 'package:apd/screens/forum/home_screen.dart';
 import 'package:apd/screens/home/avaliation_button.dart';
 import 'package:apd/screens/onBoarding/transicao.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +22,7 @@ class _HomePageState extends State<HomePage> {
   final screens = [
     HomeTab(),
     ChatsScreen(),
-    Center(child: Text('Forum', style: TextStyle(fontSize: 72))),
+    HomePageForum(),
     Center(child: Text('Profile', style: TextStyle(fontSize: 72))),
   ];
 
