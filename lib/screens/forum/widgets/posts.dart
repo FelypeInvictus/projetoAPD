@@ -1,8 +1,7 @@
 import 'package:apd/models/forum/post_model.dart';
 import 'package:apd/screens/forum/post_screen.dart';
 import 'package:flutter/material.dart';
-// ignore: import_of_legacy_library_into_null_safe
-import 'package:themify_flutter/themify_flutter.dart';
+
 
 class Posts extends StatefulWidget {
   @override
@@ -123,7 +122,7 @@ class _PostsState extends State<Posts> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: <Widget>[
                             Icon(
-                              Themify.thumb_up,
+                              Icons.thumb_up,
                               color: Colors.grey.withOpacity(0.6),
                               size: 22,
                             ),
@@ -141,7 +140,7 @@ class _PostsState extends State<Posts> {
                         Row(
                           children: <Widget>[
                             Icon(
-                              Themify.email,
+                            Icons.email,
                               color: Colors.grey.withOpacity(0.6),
                               size: 16,
                             ),
@@ -158,7 +157,7 @@ class _PostsState extends State<Posts> {
                         Row(
                           children: <Widget>[
                             Icon(
-                              Themify.eye,
+                              Icons.remove_red_eye,
                               color: Colors.grey.withOpacity(0.6),
                               size: 18,
                             ),
