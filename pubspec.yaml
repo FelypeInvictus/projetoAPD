@@ -64,5 +64,6 @@ flutter:
     - assets/quick_checking_emotions/icons/
     - assets/profile/doctors/
     - assets/profile/user/
+    - assets/forum_profile/
 
  
