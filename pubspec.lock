@@ -434,6 +434,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.4.12"
+  themify_flutter:
+    dependency: "direct main"
+    description:
+      name: themify_flutter
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.0"
   top_snackbar_flutter:
     dependency: "direct main"
     description:
