@@ -137,22 +137,6 @@ class HomeTab extends StatelessWidget {
 }
 
 
-class CircleGreenProfile extends StatelessWidget {
-  const CircleGreenProfile({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(100.0),
-        color: Color(MyColors.green),
-      ),
-      height: 200,
-    );
-  }
-}
 
 class QuickCheckingEmotions extends StatelessWidget {
   const QuickCheckingEmotions({
@@ -321,18 +305,6 @@ class AppointmentCard extends StatelessWidget {
             ),
           ),
         ),
-        // Container(
-        //   margin: EdgeInsets.symmetric(horizontal: 40),
-        //   width: double.infinity,
-        //   height: 20,
-        //   decoration: BoxDecoration(
-        //     color: Color(MyColors.bg03),
-        //     borderRadius: BorderRadius.only(
-        //       bottomRight: Radius.circular(10),
-        //       bottomLeft: Radius.circular(10),
-        //     ),
-        //   ),
-        // ),
       ],
     );
   }
