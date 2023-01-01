@@ -75,13 +75,9 @@ class HomeTab extends StatelessWidget {
           height: 20,
         ),
 
-        // SizedBox(
-        //   height: 20,
-        // ),
 
         QuickCheckingEmotions(),
 
-        //CategoryIcons(),
         SizedBox(
           height: 50,
         ),
@@ -122,12 +118,9 @@ class HomeTab extends StatelessWidget {
         // AppointmentCard(onTap: onPressedScheduleCard),
 
         SizedBox(
-          height: 50,
+          height: 70,
         ),
         buttonAgendamentos(),
-        // SizedBox(
-        //   height: 20,
-        // ),
       ]),
         ),
         ]
@@ -373,7 +366,7 @@ class _buttonAgendamentosState extends State<buttonAgendamentos> {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      splashColor: Colors.greenAccent,
+      splashColor: Colors.green,
       // Fazer tela de agendamentos!
       // onTap: () async {
       //                           await Navigator.push(
@@ -395,7 +388,7 @@ class _buttonAgendamentosState extends State<buttonAgendamentos> {
                 begin: Alignment.topRight,
                 end: Alignment.bottomLeft,
                 colors: const [
-                  Color.fromARGB(255, 194, 255, 195),
+                  Color.fromARGB(255, 27, 157, 29),
                   Color.fromARGB(255, 55, 254, 65),
                 ],
               )),
