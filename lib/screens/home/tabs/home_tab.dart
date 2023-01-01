@@ -42,21 +42,45 @@ class HomeTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      padding: EdgeInsets.symmetric(horizontal: 40),
-      children: [
-        SizedBox(
-          height: 20,
-        ),
-        UserIntro(),
-        SizedBox(
-          height: 10,
+    return Scaffold(
+      body: ListView(
+        children: <Widget>[
+        Container(
+          height: 180,
+          width: MediaQuery.of(context).size.width,
+          decoration: BoxDecoration(color: Theme.of(context).primaryColor,borderRadius: BorderRadius.vertical(bottom: Radius.circular(50)),),
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 40),
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  SizedBox(
+                    height: 10,
+                  ),
+                  UserIntro(),
+                ]),
+          ),
         ),
 
+        Padding(
+            padding: EdgeInsets.symmetric(horizontal: 40),
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  
+                
         SizedBox(
           height: 20,
         ),
+
+        // SizedBox(
+        //   height: 20,
+        // ),
+
         QuickCheckingEmotions(),
+
         //CategoryIcons(),
         SizedBox(
           height: 50,
@@ -104,10 +128,14 @@ class HomeTab extends StatelessWidget {
         // SizedBox(
         //   height: 20,
         // ),
-      ],
+      ]),
+        ),
+        ]
+      ),
     );
   }
 }
+
 
 class CircleGreenProfile extends StatelessWidget {
   const CircleGreenProfile({
@@ -152,7 +180,7 @@ class QuickCheckingEmotions extends StatelessWidget {
       child: Material(
         color: Colors.transparent,
         child: ListView(
-          padding: const EdgeInsets.all(20),
+          //padding: const EdgeInsets.all(20),
           children: [
             Text(
               'Como você está se sentindo hoje?',
@@ -414,53 +442,6 @@ class _buttonAgendamentosState extends State<buttonAgendamentos> {
   }
 }
 
-// class CategoryIcon extends StatelessWidget {
-//   IconData icon;
-//   String text;
-
-//   CategoryIcon({
-//     required this.icon,
-//     required this.text,
-//   });
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return InkWell(
-//       splashColor: Color(MyColors.bg01),
-//       onTap: () {},
-//       child: Padding(
-//         padding: const EdgeInsets.all(4.0),
-//         child: Column(
-//           children: [
-//             Container(
-//               width: 50,
-//               height: 50,
-//               decoration: BoxDecoration(
-//                 color: Color(MyColors.bg),
-//                 borderRadius: BorderRadius.circular(50),
-//               ),
-//               child: Icon(
-//                 icon,
-//                 color: Color(MyColors.primary),
-//               ),
-//             ),
-//             SizedBox(
-//               height: 10,
-//             ),
-//             Text(
-//               text,
-//               style: TextStyle(
-//                 color: Color(MyColors.primary),
-//                 fontSize: 12,
-//                 fontWeight: FontWeight.w600,
-//               ),
-//             ),
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-// }
 
 class UserIntro extends StatelessWidget {
   const UserIntro({
@@ -492,11 +473,11 @@ class UserIntro extends StatelessWidget {
           children: [
             Text(
               'Olá,',
-              style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15),
+              style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15, color: Colors.white ),
             ),
             Text(
               '${loginUPName} ${loginUPLastName} 👋'.toUpperCase(),
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, color: Colors.white),
             ),
           ],
         )
@@ -532,3 +513,4 @@ class UserIntro extends StatelessWidget {
 //         fontWeight: FontWeight.bold,
 //       ),
 //     );
+  
