@@ -1,3 +1,4 @@
+import 'package:apd/components/back-end/capitalized_case.dart';
 import 'package:apd/screens/forum/widgets/popular_topics.dart';
 import 'package:apd/screens/forum/widgets/posts.dart';
 import 'package:apd/screens/forum/widgets/top_bar.dart';
@@ -32,7 +33,7 @@ class _HomePageForumState extends State<HomePageForum> {
                   children: <Widget>[
                     //Mostrar nome do usuario [mudar caso fazer integração do banco de dados] 
                     Text(
-                      '${loginUPName} ${loginUPLastName} 👋'.toUpperCase(),
+                      CapitalizedCase(loginUPName, loginUPLastName)+' 👋',
                       style: TextStyle(
                         fontSize: 24,
                         color: Colors.white,

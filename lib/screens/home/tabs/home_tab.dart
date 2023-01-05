@@ -1,3 +1,4 @@
+import 'package:apd/components/back-end/capitalized_case.dart';
 import 'package:apd/constants.dart';
 
 import 'package:apd/screens/chats/chats_screen.dart';
@@ -441,7 +442,8 @@ class UserIntro extends StatelessWidget {
               style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15, color: Colors.white ),
             ),
             Text(
-              '${loginUPName} ${loginUPLastName} 👋'.toUpperCase(),
+              //Nome do usuario 
+              CapitalizedCase(loginUPName, loginUPLastName)+' 👋',
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, color: Colors.white),
             ),
           ],
