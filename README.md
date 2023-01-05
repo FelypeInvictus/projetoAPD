@@ -1,7 +1,9 @@
 # projetoAPD
 **VISITANTES:**
 <br>
+<br>
 ![Visitor Count](https://profile-counter.glitch.me/FelypeInvictus.projetoAPD/count.svg)
+<br>
 <br>
 **INTEGRANTES:**
 
