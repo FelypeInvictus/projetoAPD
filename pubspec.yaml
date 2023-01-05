@@ -45,7 +45,8 @@ dev_dependencies:
 
 
 flutter_native_splash:
-  color: "#b0df9a"
+  #color: "#b0df9a"
+  color: "#a4e2a2"
   image: assets/screen_splash/LoadingLogo.png
 
   size: 2000 
