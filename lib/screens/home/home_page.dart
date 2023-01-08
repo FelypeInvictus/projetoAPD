@@ -1,11 +1,6 @@
-import 'package:apd/constants.dart';
-import 'package:apd/screens/bookAppointments/components/edit_book.dart';
 import 'package:apd/screens/chats/chats_screen.dart';
 import 'package:apd/screens/forum/home_screen.dart';
-import 'package:apd/screens/home/avaliation_button.dart';
-import 'package:apd/screens/onBoarding/transicao.dart';
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 import 'tabs/home_tab.dart';
 
@@ -141,21 +136,3 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
   }
 }
 
-// bottomNavigationBar: NavigationBar(
-//   destinations: const [
-//     NavigationDestination(icon: Icon(Icons.home), label: ""),
-//     NavigationDestination(icon: Icon(Icons.message), label: ""),
-//     NavigationDestination(icon: Icon(Icons.people), label: ""),
-//     NavigationDestination(icon: Icon(Icons.person), label: ""),
-//     //NavigationDestination(icon: Icon(Icons.person), label: "Perfil") incluir icone meditação
-//   ],
-//   onDestinationSelected: (int index) {
-//     setState(() {
-//       paginaAtual = index;
-//     });
-//   },
-//   selectedIndex: paginaAtual,
-// ),
-//     );
-//   }
-// }
