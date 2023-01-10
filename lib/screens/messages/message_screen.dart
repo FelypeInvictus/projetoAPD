@@ -1,7 +1,7 @@
 import 'package:apd/constants.dart';
 import 'package:flutter/material.dart';
 
-import 'components/body.dart';
+import 'components/show_list.dart';
 
 class MessagesScreen extends StatelessWidget {
   const MessagesScreen({super.key});
@@ -10,7 +10,7 @@ class MessagesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(),
-      body: Body(),
+      body: ShowList(),
     );
   }
 

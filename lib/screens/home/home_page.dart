@@ -1,4 +1,4 @@
-import 'package:apd/screens/chats/chats_screen.dart';
+import 'package:apd/screens/messages/chats_screen.dart';
 import 'package:apd/screens/forum/home_screen.dart';
 import 'package:flutter/material.dart';
 

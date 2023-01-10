@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:onboarding/onboarding.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:apd/screens/chats/chats_screen.dart';
+import 'package:apd/screens/messages/chats_screen.dart';
 
 construirPagina({
   required Color color,
