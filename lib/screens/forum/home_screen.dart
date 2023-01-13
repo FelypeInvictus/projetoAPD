@@ -74,11 +74,26 @@ class _HomePageForumState extends State<HomePageForum> {
                             const SizedBox(height: 40),
                             Padding(
                                 padding: EdgeInsets.all(8.0),
-                                child: ValueListenableBuilder(
+                                child: SizedBox(
+                                  width: 300,
+                                  child: ValueListenableBuilder(
                                     valueListenable: dropValue,
                                     builder: (BuildContext context,
                                         String value, _) {
-                                      return DropdownButton<String>(
+                                      return DropdownButtonFormField<String>(
+                                        isExpanded: true,
+                                        decoration: InputDecoration(
+                                          label: const Text('Tópico',
+                                          textAlign: TextAlign.center,
+                                          ),
+
+                                          border: OutlineInputBorder(
+                                            borderRadius: BorderRadius.circular(6),
+                                            borderSide: const BorderSide(color: kPrimaryColor, width: 0.0),
+
+
+                                          ),
+                                        ),
                                         hint: const Text('Escolha o tópico'),
                                         value: (value.isEmpty) ? null : value,
                                         onChanged: (choose) => dropValue.value = choose.toString(),
@@ -90,6 +105,7 @@ class _HomePageForumState extends State<HomePageForum> {
 
                                       );
                                     })),
+                            ),
                             Padding(
                               padding: EdgeInsets.all(8.0),
                               child: SizedBox(
@@ -103,6 +119,7 @@ class _HomePageForumState extends State<HomePageForum> {
                                   ),
                                 ),
                               ),
+                            
                             ),
                             Padding(
                               padding: const EdgeInsets.all(5.0),
