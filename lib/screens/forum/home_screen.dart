@@ -53,6 +53,7 @@ class _HomePageForumState extends State<HomePageForum> {
                           children: <Widget>[
                             const SizedBox(height: 40),
                             Center(
+
                                 child: Text(
                               'Sinta-se à vontade para compartilhar seus pensamentos ou dúvidas.',
                               textAlign: TextAlign.center,
@@ -61,7 +62,7 @@ class _HomePageForumState extends State<HomePageForum> {
                             Padding(
                               padding: EdgeInsets.all(8.0),
                               child: SizedBox(
-                                width: 300,
+                                width: 400,
                                 child: TextFormField(
                                   maxLines: 2,
                                   keyboardType: TextInputType.text,
@@ -75,7 +76,7 @@ class _HomePageForumState extends State<HomePageForum> {
                             Padding(
                                 padding: EdgeInsets.all(8.0),
                                 child: SizedBox(
-                                  width: 300,
+                                  width: 400,
                                   child: ValueListenableBuilder(
                                     valueListenable: dropValue,
                                     builder: (BuildContext context,
@@ -89,7 +90,7 @@ class _HomePageForumState extends State<HomePageForum> {
 
                                           border: OutlineInputBorder(
                                             borderRadius: BorderRadius.circular(6),
-                                            borderSide: const BorderSide(color: kPrimaryColor, width: 0.0),
+                                            borderSide: const BorderSide(color: kPrimaryColor),
 
 
                                           ),
@@ -109,13 +110,16 @@ class _HomePageForumState extends State<HomePageForum> {
                             Padding(
                               padding: EdgeInsets.all(8.0),
                               child: SizedBox(
-                                width: 300,
+                                width: 400,
                                 child: TextFormField(
                                   keyboardType: TextInputType.multiline,
-                                  maxLines: 50,
-                                  minLines: 20,
+                                  maxLines: 30,
+                                  minLines: 10,
                                   decoration: InputDecoration(
-                                    labelText: 'Digite seu texto aqui :)',
+                                    hintText: 'Digite seu texto aqui :)',
+                                    //label: const Text('Campo de texto'),
+                                    
+                                    
                                   ),
                                 ),
                               ),
