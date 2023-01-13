@@ -1,6 +1,5 @@
 import 'package:apd/constants.dart';
 import 'package:apd/screens/forum/widgets/body.dart';
-import 'package:apd/screens/forum/widgets/create_post.dart';
 import 'package:flutter/material.dart';
 
 class HomePageForum extends StatefulWidget {
@@ -99,4 +98,3 @@ class _HomePageForumState extends State<HomePageForum> {
     );
   }
 }
-s
