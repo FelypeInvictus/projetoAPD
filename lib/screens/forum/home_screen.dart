@@ -9,6 +9,15 @@ class HomePageForum extends StatefulWidget {
 
 class _HomePageForumState extends State<HomePageForum> {
   final _formKey = GlobalKey<FormState>();
+  final dropValue = ValueNotifier('');
+  final dropOptions = {
+    'Tópico geral',
+    'Sáude mental',
+    'Sindrome de Burnout',
+    'Depressão',
+    'Ansiedade',
+    'Dǘuidas'
+  };
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -62,8 +71,25 @@ class _HomePageForumState extends State<HomePageForum> {
                                 ),
                               ),
                             ),
-                            
                             const SizedBox(height: 40),
+                            Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: ValueListenableBuilder(
+                                    valueListenable: dropValue,
+                                    builder: (BuildContext context,
+                                        String value, _) {
+                                      return DropdownButton<String>(
+                                        hint: const Text('Escolha o tópico'),
+                                        value: (value.isEmpty) ? null : value,
+                                        onChanged: (choose) => dropValue.value = choose.toString(),
+                                        items: dropOptions.map((option) => DropdownMenuItem(
+                                          value: option,
+                                          child: Text(option),
+                                          ),
+                                          ).toList(),
+
+                                      );
+                                    })),
                             Padding(
                               padding: EdgeInsets.all(8.0),
                               child: SizedBox(
