@@ -23,7 +23,7 @@ class _HomePageForumState extends State<HomePageForum> {
                   scrollable: true,
                   content: Stack(
                     clipBehavior: Clip.none,
-                    //overflow: Overflow.visible,
+                    
                     children: <Widget>[
                       Positioned(
                         right: 10.0,
@@ -47,6 +47,8 @@ class _HomePageForumState extends State<HomePageForum> {
                             Padding(
                               padding: EdgeInsets.all(8.0),
                               child: TextFormField(
+                                maxLines: 1,
+                                  keyboardType: TextInputType.text,
                                 decoration: InputDecoration(
                                   labelText: 'Titulo',
                                 ),
@@ -60,13 +62,11 @@ class _HomePageForumState extends State<HomePageForum> {
                             Padding(
                               padding: EdgeInsets.all(8.0),
                               child: TextFormField(
+                                keyboardType: TextInputType.multiline,
                                 maxLines: 10,  
                                 minLines: 1,
                                 decoration: InputDecoration(
                                   labelText: 'Texto',
-                                  contentPadding:
-                                      EdgeInsets.symmetric(vertical: 40),
-                                  //icon: Icon(Icons.message ),
                                 ),
                               ),
                             ),
