@@ -23,7 +23,6 @@ class _HomePageForumState extends State<HomePageForum> {
                   scrollable: true,
                   content: Stack(
                     clipBehavior: Clip.none,
-                    
                     children: <Widget>[
                       Positioned(
                         right: 10.0,
@@ -43,44 +42,65 @@ class _HomePageForumState extends State<HomePageForum> {
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
                           children: <Widget>[
-                            SizedBox(height: 40),
+                            const SizedBox(height: 40),
+                            Center(
+                                child: Text(
+                              'Sinta-se à vontade para compartilhar seus pensamentos ou dúvidas.',
+                              textAlign: TextAlign.center,
+                            )),
+                            const SizedBox(height: 20),
                             Padding(
                               padding: EdgeInsets.all(8.0),
-                              child: TextFormField(
-                                maxLines: 1,
+                              child: SizedBox(
+                                width: 300,
+                                child: TextFormField(
+                                  maxLines: 2,
                                   keyboardType: TextInputType.text,
-                                decoration: InputDecoration(
-                                  labelText: 'Titulo',
+                                  decoration: InputDecoration(
+                                    labelText: 'Titulo',
+                                  ),
                                 ),
                               ),
                             ),
+                            
+                            const SizedBox(height: 40),
                             Padding(
                               padding: EdgeInsets.all(8.0),
-                              child: TextFormField(),
-                            ),
-                            SizedBox(height: 40),
-                            Padding(
-                              padding: EdgeInsets.all(8.0),
-                              child: TextFormField(
-                                keyboardType: TextInputType.multiline,
-                                maxLines: 10,  
-                                minLines: 1,
-                                decoration: InputDecoration(
-                                  labelText: 'Texto',
+                              child: SizedBox(
+                                width: 300,
+                                child: TextFormField(
+                                  keyboardType: TextInputType.multiline,
+                                  maxLines: 50,
+                                  minLines: 20,
+                                  decoration: InputDecoration(
+                                    labelText: 'Digite seu texto aqui :)',
+                                  ),
                                 ),
                               ),
                             ),
                             Padding(
                               padding: const EdgeInsets.all(5.0),
-                              child: ElevatedButton(
-                                child: Text("Postar"),
-                                onPressed: () {
-                                  if (_formKey.currentState!.validate()) {
-                                    _formKey.currentState!.save();
-                                  }
-                                },
+                              child: SizedBox(
+                                width: 80,
+                                child: ElevatedButton(
+                                  child: Text("Postar"),
+
+                                  onPressed: () {
+                                    if (_formKey.currentState!.validate()) {
+                                      _formKey.currentState!.save();
+                                    }
+                                  },
+
+                                  // style: ElevatedButton.styleFrom(
+                                  //     shape: RoundedRectangleBorder(
+                                  //     borderRadius: BorderRadius.circular(5),
+                                  //   ),
+                                  //   maximumSize:  Size(double.infinity,36),
+                                  //   minimumSize:  Size(double.infinity,36),
+                                  // ),
+                                ),
                               ),
-                            )
+                            ),
                           ],
                         ),
                       ),
