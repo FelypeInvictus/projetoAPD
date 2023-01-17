@@ -1,5 +1,6 @@
 import 'package:apd/components/back-end/capitalized_case.dart';
 import 'package:apd/constants.dart';
+import 'package:apd/screens/book_appointments/components/edit_book.dart';
 
 import 'package:apd/screens/messages/chats_screen.dart';
 import 'package:apd/screens/home/tabs/schedule_tab.dart';
@@ -121,7 +122,7 @@ class HomeTab extends StatelessWidget {
         SizedBox(
           height: 70,
         ),
-        buttonAgendamentos(),
+        buttonEditBooks(),
       ]),
         ),
         ]
@@ -356,57 +357,6 @@ class ScheduleCard extends StatelessWidget {
   }
 }
 
-class buttonAgendamentos extends StatefulWidget {
-  const buttonAgendamentos({super.key});
-
-  @override
-  State<buttonAgendamentos> createState() => _buttonAgendamentosState();
-}
-
-class _buttonAgendamentosState extends State<buttonAgendamentos> {
-  @override
-  Widget build(BuildContext context) {
-    return InkWell(
-      splashColor: Colors.green,
-      // Fazer tela de agendamentos!
-      // onTap: () async {
-      //                           await Navigator.push(
-      //                             context,
-      //                             MaterialPageRoute(
-      //                               builder: (context) =>
-      //                                   WelcomeScreen()),
-      //                             );
-
-      //                         },
-      child: Center(
-        child: Container(
-          height: 100,
-          width: 200,
-          //width: double.infinity,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-              gradient: LinearGradient(
-                begin: Alignment.topRight,
-                end: Alignment.bottomLeft,
-                colors: const [
-                  Color.fromARGB(255, 27, 157, 29),
-                  Color.fromARGB(255, 55, 254, 65),
-                ],
-              )),
-          child: Center(
-            child: Text(
-              'AGENDAR',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 30,
-              ),
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
 
 
 class UserIntro extends StatelessWidget {

@@ -16,7 +16,7 @@ class _HomePageForumState extends State<HomePageForum> {
     'Sindrome de Burnout',
     'Depressão',
     'Ansiedade',
-    'Dǘuidas'
+    'Dúvidas'
   };
   @override
   Widget build(BuildContext context) {
