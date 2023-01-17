@@ -122,7 +122,7 @@ class HomeTab extends StatelessWidget {
         SizedBox(
           height: 70,
         ),
-        buttonEditBooks(),
+        buttonBookAppointments(),
       ]),
         ),
         ]

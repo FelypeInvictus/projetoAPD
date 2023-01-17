@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class buttonEditBooks extends StatefulWidget {
-  const buttonEditBooks({super.key});
+class buttonBookAppointments extends StatefulWidget {
+  const buttonBookAppointments({super.key});
 
   @override
-  State<buttonEditBooks> createState() => _buttonEditBooksState();
+  State<buttonBookAppointments> createState() => _buttonBookAppointmentsState();
 }
 
-class _buttonEditBooksState extends State<buttonEditBooks> {
+class _buttonBookAppointmentsState extends State<buttonBookAppointments> {
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -20,19 +20,54 @@ class _buttonEditBooksState extends State<buttonEditBooks> {
                 // width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height * .60,
 
-                child: Center(
+                
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    mainAxisSize: MainAxisSize.min,
+                    //mainAxisAlignment: MainAxisAlignment.center,
+                    //mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
-                      const Text('BottomSheet'),
-                      ElevatedButton(
-                        child: const Text('Fechar'),
-                        onPressed: () => Navigator.pop(context),
+                      SizedBox(height: 10),
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 30),
+                      
+                      child: Row(
+                        
+                        children: [
+                        Spacer(),
+                        InkWell(
+                          onTap: () {
+                            Navigator.of(context).pop();
+                          },
+
+                          child: Icon(Icons.close),
+                          //foregroundColor: Colors.grey,
+                          //backgroundColor: Colors.red,
+                        ),
+                        ]
                       ),
+                      
+                      ), 
+                      Padding(
+  padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
+  child: Text(
+    'Faça seu agendamento',
+  ),
+),
+Expanded(
+  child: Padding(
+    padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
+    child: Text(
+      'Selecione o psicologo, e preencha os campos devidamente',
+      style: TextStyle(color: Colors.grey, fontSize: 12),
+    ),
+  ),
+)
+                      // ElevatedButton(
+                      //   child: const Text('Fechar'),
+                      //   onPressed: () => Navigator.pop(context),
+                      // ),
                     ],
                   ),
-                ),
+                
               );
             });
       },
