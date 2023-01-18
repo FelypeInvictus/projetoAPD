@@ -45,12 +45,14 @@ class HomeTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
-        children: <Widget>[
+      body: ListView(children: <Widget>[
         Container(
           height: 180,
           width: MediaQuery.of(context).size.width,
-          decoration: BoxDecoration(color: Theme.of(context).primaryColor,borderRadius: BorderRadius.vertical(bottom: Radius.circular(50)),),
+          decoration: BoxDecoration(
+            color: Theme.of(context).primaryColor,
+            borderRadius: BorderRadius.vertical(bottom: Radius.circular(50)),
+          ),
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 40),
             child: Column(
@@ -64,74 +66,67 @@ class HomeTab extends StatelessWidget {
                 ]),
           ),
         ),
-
         Padding(
-            padding: EdgeInsets.symmetric(horizontal: 40),
-            child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  
-                
-        SizedBox(
-          height: 20,
-        ),
-
-
-        QuickCheckingEmotions(),
-
-        SizedBox(
-          height: 50,
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(
-              'Sessões marcadas',
-              style: kTitleStyle,
-            ),
-            TextButton(
-              child: Text(
-                'Ver todos',
-                style: TextStyle(
-                  color: Color(MyColors.yellow01),
-                  fontWeight: FontWeight.bold,
+          padding: EdgeInsets.symmetric(horizontal: 40),
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                SizedBox(
+                  height: 20,
                 ),
-              ),
-              onPressed: () async {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return const Schedule();
-                    },
-                  ),
-                );
-              },
-            )
-          ],
-        ),
-        SizedBox(
-          height: 30,
-        ),
-        AppointmentCard(
-            //   onTap: onPressedScheduleCard,
-            ),
-        // AppointmentCard(onTap: onPressedScheduleCard),
 
-        SizedBox(
-          height: 70,
+                QuickCheckingEmotions(),
+
+                SizedBox(
+                  height: 50,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Sessões marcadas',
+                      style: kTitleStyle,
+                    ),
+                    TextButton(
+                      child: Text(
+                        'Ver todos',
+                        style: TextStyle(
+                          color: Color(MyColors.yellow01),
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      onPressed: () async {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return const Schedule();
+                            },
+                          ),
+                        );
+                      },
+                    )
+                  ],
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                AppointmentCard(
+                    //   onTap: onPressedScheduleCard,
+                    ),
+                // AppointmentCard(onTap: onPressedScheduleCard),
+
+                SizedBox(
+                  height: 70,
+                ),
+                BookAppointments(),
+              ]),
         ),
-        buttonBookAppointments(),
       ]),
-        ),
-        ]
-      ),
     );
   }
 }
-
-
 
 class QuickCheckingEmotions extends StatelessWidget {
   const QuickCheckingEmotions({
@@ -389,12 +384,18 @@ class UserIntro extends StatelessWidget {
           children: [
             Text(
               'Olá,',
-              style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15, color: Colors.white ),
+              style: TextStyle(
+                  fontWeight: FontWeight.w500,
+                  fontSize: 15,
+                  color: Colors.white),
             ),
             Text(
-              //Nome do usuario 
-              CapitalizedCase(loginUPName, loginUPLastName)+' 👋',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, color: Colors.white),
+              //Nome do usuario
+              CapitalizedCase(loginUPName, loginUPLastName) + ' 👋',
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                  color: Colors.white),
             ),
           ],
         )
@@ -430,4 +431,3 @@ class UserIntro extends StatelessWidget {
 //         fontWeight: FontWeight.bold,
 //       ),
 //     );
-  

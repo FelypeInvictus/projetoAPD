@@ -1,75 +1,69 @@
 import 'package:flutter/material.dart';
 
-class buttonBookAppointments extends StatefulWidget {
-  const buttonBookAppointments({super.key});
+class BookAppointments extends StatefulWidget {
+  const BookAppointments({super.key});
 
   @override
-  State<buttonBookAppointments> createState() => _buttonBookAppointmentsState();
+  State<BookAppointments> createState() => _BookAppointmentsState();
 }
 
-class _buttonBookAppointmentsState extends State<buttonBookAppointments> {
+class _BookAppointmentsState extends State<BookAppointments> {
   @override
   Widget build(BuildContext context) {
     return InkWell(
       splashColor: Colors.green,
       onTap: () async {
-        showModalBottomSheet<void>(
-            context: context,
-            builder: (BuildContext context) {
-              return Container(
-                // width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height * .60,
+        showModalBottomSheet(
+          context: context,
+          isScrollControlled: true,
+          backgroundColor: Colors.transparent,
+          builder: (context) => Container(
+            height: MediaQuery.of(context).size.height * 0.75,
+            decoration: new BoxDecoration(
+              color: Colors.white,
+              borderRadius: new BorderRadius.only(
+                topLeft: const Radius.circular(25.0),
+                topRight: const Radius.circular(25.0),
+              ),
+            ),
+            child: Column(
+                //mainAxisAlignment: MainAxisAlignment.center,
+                //mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  SizedBox(height: 10),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 30),
+                    child: Row(children: [
+                      Spacer(),
+                      InkWell(
+                        onTap: () {
+                          Navigator.of(context).pop();
+                        },
 
-                
-                  child: Column(
-                    //mainAxisAlignment: MainAxisAlignment.center,
-                    //mainAxisSize: MainAxisSize.min,
-                    children: <Widget>[
-                      SizedBox(height: 10),
-                      Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 30),
-                      
-                      child: Row(
-                        
-                        children: [
-                        Spacer(),
-                        InkWell(
-                          onTap: () {
-                            Navigator.of(context).pop();
-                          },
-
-                          child: Icon(Icons.close),
-                          //foregroundColor: Colors.grey,
-                          //backgroundColor: Colors.red,
-                        ),
-                        ]
+                        child: Icon(Icons.close),
+                        //foregroundColor: Colors.grey,
+                        //backgroundColor: Colors.red,
                       ),
-                      
-                      ), 
-                      Padding(
-  padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
-  child: Text(
-    'Faça seu agendamento',
-  ),
-),
-Expanded(
-  child: Padding(
-    padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
-    child: Text(
-      'Selecione o psicologo, e preencha os campos devidamente',
-      style: TextStyle(color: Colors.grey, fontSize: 12),
-    ),
-  ),
-)
-                      // ElevatedButton(
-                      //   child: const Text('Fechar'),
-                      //   onPressed: () => Navigator.pop(context),
-                      // ),
-                    ],
+                    ]),
                   ),
-                
-              );
-            });
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
+                    child: Text(
+                      'Faça seu agendamento',
+                    ),
+                  ),
+                  Expanded(
+                    child: Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
+                      child: Text(
+                        'Selecione o psicologo, e preencha os campos devidamente',
+                        style: TextStyle(color: Colors.grey, fontSize: 12),
+                      ),
+                    ),
+                  )
+                ]),
+          ),
+        );
       },
       child: Center(
         child: Container(
