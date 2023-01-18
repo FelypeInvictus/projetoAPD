@@ -8,13 +8,14 @@
 **INTEGRANTES:**
 
 
-BACKEND:
-Felype,
-Peterson
+BACKEND/FRONTEND:
+Felype
 
 
 - Banco de dados: Gustavo, Jairo
 - Documentação: Guilherme
+- TCC escrito: Peterson
+
 
 DESENVOLVEDOR WEB:
 Caio
