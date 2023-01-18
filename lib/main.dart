@@ -1,9 +1,9 @@
 import 'dart:ui';
 
 import 'package:apd/components/theme.dart';
-import 'package:apd/constants.dart';
-import 'package:apd/screens/home/home_page.dart';
-import 'package:apd/screens/onboarding/transicao.dart';
+import 'package:apd/components/constants.dart';
+import 'package:apd/widgets/bottom_navigation_bar.dart';
+import 'package:apd/screens/onboarding/onboarding.dart';
 import 'package:apd/screens/welcome/welcome_screen.dart';
 import 'package:flutter/material.dart';
 //import 'package:firebase_auth/firebase_auth.dart';
@@ -40,7 +40,7 @@ class MeuApp extends StatelessWidget {
       theme: themeAPD,
 
       //home: mostraTelaPrincipal ? const RootPage() : const MyApp(),
-      home: mostraTelaPrincipal ? const HomePage() : const WelcomeScreen(),
+      home: mostraTelaPrincipal ? const bottomNavigationBar() : const WelcomeScreen(),
     );
   }
 }

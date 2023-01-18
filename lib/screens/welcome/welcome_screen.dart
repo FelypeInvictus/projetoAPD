@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../components/background.dart';
-import '../../responsive.dart';
+import '../../widgets/background.dart';
+import '../../components/responsive.dart';
 import 'components/login_signup_btn.dart';
 import 'components/welcome_image.dart';
 

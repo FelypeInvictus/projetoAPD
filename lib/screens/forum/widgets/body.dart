@@ -1,4 +1,4 @@
-import 'package:apd/components/back-end/capitalized_case.dart';
+import 'package:apd/components/capitalized_case.dart';
 import 'package:flutter/material.dart';
 import 'package:apd/screens/forum/widgets/popular_topics.dart';
 import 'package:apd/screens/forum/widgets/posts.dart';

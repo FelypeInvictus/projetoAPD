@@ -1,4 +1,4 @@
-import 'package:apd/screens/home/home_page.dart';
+import 'package:apd/widgets/bottom_navigation_bar.dart';
 import 'package:apd/screens/messages/message_screen.dart';
 import 'package:apd/screens/welcome/welcome_screen.dart';
 import 'package:flutter/material.dart';
@@ -7,7 +7,7 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:apd/screens/messages/chats_screen.dart';
 
-construirPagina({
+buildPage({
   required Color color,
   required String urlImage,
   required String title,
@@ -77,19 +77,19 @@ class _onBoardingState extends State<onBoarding> {
             setState(() => ultimaPagina = index == 2);
           },
           children: [
-            construirPagina(
+            buildPage(
                 color: Color.fromARGB(255, 247, 218, 164),
                 urlImage: 'assets/transition/page1.png',
                 title: 'O QUE OFERECEMOS?',
                 subtitle:
                     'Temos equipes de profissionais na àrea de psicologica dispostas a atender a demanda de professores via chat, video ou chamada. Cada sessão é agendada pelo docente pelo nosso App, podendo, se ele quiser, marcar sessões presenciais em nossas clinicas psicologicas conveniadas.'),
-            construirPagina(
+            buildPage(
                 color: Colors.blue.shade100,
                 urlImage: 'assets/transition/page2.png',
                 title: 'QUAL O NOSSO OBJETIVO?',
                 subtitle:
                     'Propor apoio aos docentes vinculados à plataforma, com o apoio de um psicologo online ou presencial.  com outros professores'),
-            construirPagina(
+            buildPage(
                 color: Colors.green.shade100,
                 urlImage: 'assets/transition/page3.png',
                 title: 'COMO O APP PODE LHE AJUDAR?',
@@ -117,7 +117,7 @@ class _onBoardingState extends State<onBoarding> {
                 final prefs = await SharedPreferences.getInstance();
                 prefs.setBool('mostraTelaPrincipal', true);
                 Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(builder: (context) => const HomePage()));
+                    MaterialPageRoute(builder: (context) => const bottomNavigationBar()));
               },
             )
           : Container(

@@ -1,8 +1,8 @@
-import 'package:apd/constants.dart';
-import 'package:apd/responsive.dart';
+import 'package:apd/components/constants.dart';
+import 'package:apd/components/responsive.dart';
 import 'package:flutter/material.dart';
 
-import '../../components/background.dart';
+import '../../widgets/background.dart';
 import 'components/sign_up_top_image.dart';
 import 'components/signup_form.dart';
 

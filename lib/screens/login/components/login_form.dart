@@ -1,14 +1,14 @@
-import 'package:apd/screens/home/home_page.dart';
+import 'package:apd/widgets/bottom_navigation_bar.dart';
 import 'package:apd/screens/signup/components/signup_form.dart';
 import 'package:apd/screens/signup/signup_screen.dart';
-import 'package:apd/screens/onboarding/transicao.dart';
+import 'package:apd/screens/onboarding/onboarding.dart';
 import 'package:flutter/material.dart';
 import 'package:apd/screens/signup/components/signup_form.dart';
 import 'package:top_snackbar_flutter/custom_snack_bar.dart';
 import 'package:top_snackbar_flutter/top_snack_bar.dart';
 
-import '../../../components/already_have_an_account_acheck.dart';
-import '../../../constants.dart';
+import '../../../widgets/already_have_an_account_acheck.dart';
+import '../../../components/constants.dart';
 
 //Declarando variaveis email e senha
 String loginEmail = '';

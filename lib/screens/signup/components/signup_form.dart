@@ -3,8 +3,8 @@ import 'package:form_field_validator/form_field_validator.dart';
 import 'package:top_snackbar_flutter/custom_snack_bar.dart';
 import 'package:top_snackbar_flutter/top_snack_bar.dart';
 
-import '../../../components/already_have_an_account_acheck.dart';
-import '../../../constants.dart';
+import '../../../widgets/already_have_an_account_acheck.dart';
+import '../../../components/constants.dart';
 import '../../login/login_screen.dart';
 
 //Declaração das variaveis
