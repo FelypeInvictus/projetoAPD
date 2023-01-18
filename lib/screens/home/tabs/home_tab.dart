@@ -11,28 +11,7 @@ import 'package:flutter/material.dart';
 import 'styles/colors.dart';
 import 'styles/styles.dart';
 
-List<Map> doctors = [
-  {
-    'img': 'assets/doctor02.png',
-    'doctorName': 'Dr. Gardner Pearson',
-    'doctorTitle': 'Heart Specialist'
-  },
-  {
-    'img': 'assets/doctor03.jpeg',
-    'doctorName': 'Dr. Rosa Williamson',
-    'doctorTitle': 'Skin Specialist'
-  },
-  {
-    'img': 'assets/doctor02.png',
-    'doctorName': 'Dr. Gardner Pearson',
-    'doctorTitle': 'Heart Specialist'
-  },
-  {
-    'img': 'assets/doctor03.jpeg',
-    'doctorName': 'Dr. Rosa Williamson',
-    'doctorTitle': 'Skin Specialist'
-  }
-];
+
 
 class HomeTab extends StatelessWidget {
   //final void Function() onPressedScheduleCard;
@@ -76,7 +55,7 @@ class HomeTab extends StatelessWidget {
                   height: 20,
                 ),
 
-                QuickCheckingEmotions(),
+                EmotionalCheckBar(),
 
                 SizedBox(
                   height: 50,
@@ -128,8 +107,8 @@ class HomeTab extends StatelessWidget {
   }
 }
 
-class QuickCheckingEmotions extends StatelessWidget {
-  const QuickCheckingEmotions({
+class EmotionalCheckBar extends StatelessWidget {
+  const EmotionalCheckBar({
     Key? key,
   }) : super(key: key);
 
