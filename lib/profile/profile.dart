@@ -28,7 +28,22 @@ class _profileUserState extends State<profileUser> {
                 SizedBox(height: 8),
                 nameUser(),
                 SizedBox(height: 70),
-               
+                 InkWell(
+                  child: Expanded(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Text('Agendamentos',
+                            style: TextStyle(
+                              fontSize: 20,
+                            )),
+                        SizedBox(width: 8),
+                        Icon(Icons.event),
+                      ],
+                    ),
+                  ),
+                ),
+                             
               ]),
         ),
       ),
