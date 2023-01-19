@@ -28,7 +28,7 @@ class _profileUserState extends State<profileUser> {
                 SizedBox(height: 8),
                 nameUser(),
                 SizedBox(height: 70),
-                 InkWell(
+                InkWell(
                   child: Expanded(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -43,7 +43,22 @@ class _profileUserState extends State<profileUser> {
                     ),
                   ),
                 ),
-                             
+                SizedBox(height: 30),
+                InkWell(
+                  child: Expanded(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Text('Contatos',
+                            style: TextStyle(
+                              fontSize: 30,
+                            )),
+                        SizedBox(width: 8),
+                        Icon(Icons.contacts),
+                      ],
+                    ),
+                  ),
+                ),
               ]),
         ),
       ),
