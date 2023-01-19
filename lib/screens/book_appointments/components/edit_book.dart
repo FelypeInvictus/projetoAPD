@@ -1,5 +1,6 @@
 import 'package:apd/screens/book_appointments/widgets/dropdown.dart';
 import 'package:apd/screens/book_appointments/widgets/dropdown_consult_type.dart';
+import 'package:apd/screens/book_appointments/widgets/input_text_user.dart';
 import 'package:flutter/material.dart';
 
 class BookAppointments extends StatefulWidget {
@@ -65,7 +66,10 @@ class _BookAppointmentsState extends State<BookAppointments> {
                     ),
                   
                    //dropDownPsychologist(),
+                   SizedBox(height: 40),
                    dropDownConsultType(),
+                   SizedBox(height: 80),
+                   inputTextUser(),
                  
                 ]),
           ),

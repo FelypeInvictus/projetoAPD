@@ -13,7 +13,7 @@ class WelcomeImage extends StatelessWidget {
     return Column(
       children: [
         const Text(
-          "Bem-vindo(a) ao",
+          "Bem-vindo(a) a",
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 15.0,

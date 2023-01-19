@@ -17,7 +17,7 @@ class _profileUserState extends State<profileUser> {
     return ListView(children: <Widget>[
       Center(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 230),
+          padding: EdgeInsets.symmetric(horizontal: 40),
           child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
@@ -28,37 +28,70 @@ class _profileUserState extends State<profileUser> {
                 SizedBox(height: 8),
                 nameUser(),
                 SizedBox(height: 70),
-                InkWell(
-                  child: Expanded(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        Text('Agendamentos',
-                            style: TextStyle(
-                              fontSize: 20,
-                            )),
-                        SizedBox(width: 8),
-                        Icon(Icons.event),
-                      ],
-                    ),
-                  ),
-                ),
-                SizedBox(height: 30),
-                InkWell(
-                  child: Expanded(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        Text('Contatos',
-                            style: TextStyle(
-                              fontSize: 30,
-                            )),
-                        SizedBox(width: 8),
-                        Icon(Icons.contacts),
-                      ],
-                    ),
-                  ),
-                ),
+
+                     
+                // InkWell(
+
+                 
+                //   // child: Expanded(
+                //   //   child: Row(
+                //   //     //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //   //     children: <Widget>[
+                //   //       Text('Agendamentos',
+                //   //           style: TextStyle(
+                //   //             fontSize: 25,
+                //   //           )),
+                //   //       // SizedBox(width: 8),
+                //   //       // Icon(Icons.event),
+                //   //     ],
+                //   //   ),
+                //   // ),
+                // ),
+                
+
+              
+
+
+
+
+
+
+
+
+
+
+
+                // SizedBox(height: 30),
+                // InkWell(
+                //   child: Expanded(
+                //     child: Row(
+                //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //       children: <Widget>[
+                //         Text('Contatos',
+                //             style: TextStyle(
+                //               fontSize: 25,
+                              
+                //             )),
+                //         // SizedBox(width: 8),
+                //         // Icon(Icons.contacts),
+                //       ],
+                //     ),
+                //   ),
+                // ),
+               
+
+
+
+
+
+
+
+
+
+
+
+
+
               ]),
         ),
       ),

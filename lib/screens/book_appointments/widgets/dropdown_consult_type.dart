@@ -21,7 +21,7 @@ Padding dropDownConsultType() {
               isExpanded: true,
               decoration: InputDecoration(
                 label: const Text(
-                  'Psicologos',
+                  'Tipo de consulta',
                   textAlign: TextAlign.center,
                 ),
                 border: OutlineInputBorder(
