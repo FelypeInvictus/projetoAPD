@@ -1,3 +1,5 @@
+import 'package:apd/screens/book_appointments/widgets/dropdown.dart';
+import 'package:apd/screens/book_appointments/widgets/dropdown_consult_type.dart';
 import 'package:flutter/material.dart';
 
 class BookAppointments extends StatefulWidget {
@@ -52,15 +54,19 @@ class _BookAppointmentsState extends State<BookAppointments> {
                       'Faça seu agendamento',
                     ),
                   ),
-                  Expanded(
-                    child: Padding(
+                  
+                    Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
                       child: Text(
                         'Selecione o psicologo, e preencha os campos devidamente',
                         style: TextStyle(color: Colors.grey, fontSize: 12),
                       ),
+                      
                     ),
-                  )
+                  
+                   //dropDownPsychologist(),
+                   dropDownConsultType(),
+                 
                 ]),
           ),
         );

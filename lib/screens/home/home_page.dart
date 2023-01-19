@@ -1,11 +1,8 @@
 import 'package:apd/components/capitalized_case.dart';
 import 'package:apd/components/constants.dart';
 import 'package:apd/screens/book_appointments/components/edit_book.dart';
-
-import 'package:apd/screens/messages/chats_screen.dart';
 import 'package:apd/screens/home/tabs/schedule_tab.dart';
 import 'package:apd/screens/signup/components/signup_form.dart';
-import 'package:apd/screens/welcome/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'tabs/styles/colors.dart';

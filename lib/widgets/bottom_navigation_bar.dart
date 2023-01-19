@@ -1,3 +1,4 @@
+import 'package:apd/profile/profile.dart';
 import 'package:apd/screens/messages/chats_screen.dart';
 import 'package:apd/screens/forum/home_screen.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,7 @@ class _bottomNavigationBarState extends State<bottomNavigationBar> {
     HomeTab(),
     ChatsScreen(),
     HomePageForum(),
-    Center(child: Text('Profile', style: TextStyle(fontSize: 72))),
+    profileUser(),
   ];
 
   @override

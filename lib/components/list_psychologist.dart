@@ -1,6 +1,6 @@
 //Lista de psicologos
 
-List<Map> psychologist = [
+final psychologist = [
   {
     'img': 'assets/doctor02.png',
     'doctorName': 'Dr. Gardner Pearson',
