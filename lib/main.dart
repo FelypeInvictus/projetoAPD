@@ -1,9 +1,7 @@
 import 'dart:ui';
 
 import 'package:apd/components/theme.dart';
-import 'package:apd/components/constants.dart';
 import 'package:apd/widgets/bottom_navigation_bar.dart';
-import 'package:apd/screens/onboarding/onboarding.dart';
 import 'package:apd/screens/welcome/welcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
