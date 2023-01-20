@@ -10,7 +10,7 @@ Padding inputTextUser() {
         maxLines: 30,
         minLines: 10,
         decoration: InputDecoration(
-          hintText: 'Existe algo que gostaria de compartilhar?',
+          hintText: '        Existe algo que gostaria de compartilhar?',
           //label: const Text('Campo de texto'),
         ),
       ),

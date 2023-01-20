@@ -29,7 +29,6 @@ Padding dropDownConsultType() {
                   borderSide: const BorderSide(color: kPrimaryColor),
                 ),
               ),
-              hint: const Text('Escolha o psicologo'),
               value: (value.isEmpty) ? null : value,
               onChanged: (choose) => dropValue.value = choose.toString(),
               items: consultType

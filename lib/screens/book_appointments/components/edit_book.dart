@@ -23,7 +23,7 @@ class _BookAppointmentsState extends State<BookAppointments> {
           isScrollControlled: true,
           backgroundColor: Colors.transparent,
           builder: (context) => Container(
-            height: MediaQuery.of(context).size.height * 0.75,
+            height: MediaQuery.of(context).size.height * 0.80,
             decoration: new BoxDecoration(
               color: Colors.white,
               borderRadius: new BorderRadius.only(
@@ -72,6 +72,7 @@ class _BookAppointmentsState extends State<BookAppointments> {
                    dropDownConsultType(),
                    SizedBox(height: 80),
                    inputTextUser(),
+                   SizedBox(height: 20),
                    BasicDataTimeField(),
                  
                 ]),

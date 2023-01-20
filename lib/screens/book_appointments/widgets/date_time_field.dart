@@ -20,15 +20,16 @@ class _BasicDataTimeFieldState extends State<BasicDataTimeField> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
           
-      Text('Data e horario (${format.pattern})'),
+      //Text('Data e horario (${format.pattern})'),
       SizedBox(
-        width: 300,
+        width: 250,
       child: DateTimeField(
         decoration: InputDecoration(
+          label: Text("Dia e horario"),
         border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(5.0),
-            borderSide: const BorderSide(color: Colors.green)),
-        icon: const Icon(Icons.calendar_today),
+            borderSide: const BorderSide(color: Colors.green )),
+        //  icon: const Icon(Icons.calendar_today),
         ),
       
         format: format,
