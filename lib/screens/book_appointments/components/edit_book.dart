@@ -1,3 +1,5 @@
+import 'package:apd/screens/book_appointments/widgets/date_choose.dart';
+import 'package:apd/screens/book_appointments/widgets/date_time_field.dart';
 import 'package:apd/screens/book_appointments/widgets/dropdown.dart';
 import 'package:apd/screens/book_appointments/widgets/dropdown_consult_type.dart';
 import 'package:apd/screens/book_appointments/widgets/input_text_user.dart';
@@ -70,6 +72,7 @@ class _BookAppointmentsState extends State<BookAppointments> {
                    dropDownConsultType(),
                    SizedBox(height: 80),
                    inputTextUser(),
+                   BasicDataTimeField(),
                  
                 ]),
           ),
