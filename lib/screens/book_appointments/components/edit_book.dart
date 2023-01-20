@@ -21,9 +21,10 @@ class _BookAppointmentsState extends State<BookAppointments> {
         showModalBottomSheet(
           context: context,
           isScrollControlled: true,
+          elevation: 20,
           backgroundColor: Colors.transparent,
           builder: (context) => Container(
-            height: MediaQuery.of(context).size.height * 0.80,
+            height: MediaQuery.of(context).size.height * 0.90,
             decoration: new BoxDecoration(
               color: Colors.white,
               borderRadius: new BorderRadius.only(
@@ -68,12 +69,19 @@ class _BookAppointmentsState extends State<BookAppointments> {
                     ),
                   
                    //dropDownPsychologist(),
+                   
                    SizedBox(height: 40),
-                   dropDownConsultType(),
+                   Expanded(
+                  child: dropDownConsultType(),
+                   ),
                    SizedBox(height: 80),
-                   inputTextUser(),
+                   Expanded(
+                    child:inputTextUser(),
+                   ),
                    SizedBox(height: 20),
-                   BasicDataTimeField(),
+                   Expanded(
+                   child: BasicDataTimeField()
+                   ),
                  
                 ]),
           ),
