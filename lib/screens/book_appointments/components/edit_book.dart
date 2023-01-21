@@ -1,13 +1,12 @@
 import 'package:apd/components/constants.dart';
+import 'package:apd/screens/home/tabs/styles/colors.dart';
 // import 'package:apd/screens/book_appointments/widgets/date_choose.dart';
 // import 'package:apd/screens/book_appointments/widgets/date_time_field.dart';
 // import 'package:apd/screens/book_appointments/widgets/dropdown_list_doctors.dart';
 // import 'package:apd/screens/book_appointments/widgets/dropdown_consult_type.dart';
 // import 'package:apd/screens/book_appointments/widgets/input_text_user.dart';
 import 'package:datetime_picker_formfield/datetime_picker_formfield.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
 
 //DropDown tipo de consulta - declarando variaveis
@@ -182,6 +181,71 @@ class _BookAppointmentsState extends State<BookAppointments> {
                         ),
                       ),
                     ),
+                    TextButton(
+                      child: Text(
+                        'Enviar mensagem',
+                        style: TextStyle(
+                          color: Color(MyColors.yellow01),
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      onPressed: () {
+                        showDialog(
+                            context: context,
+                            builder: (BuildContext context) {
+                              return AlertDialog(
+                                scrollable: true,
+                  content: Column(
+                  //mainAxisAlignment: MainAxisAlignment.center,
+                  //mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    SizedBox(height: 10),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 30),
+                      child: Row(children: [
+                        Spacer(),
+                        InkWell(
+                          onTap: () {
+                            Navigator.of(context).pop();
+                          },
+
+                          child: Icon(Icons.close),
+
+                          //foregroundColor: Colors.grey,
+                          //backgroundColor: Colors.red,
+                        ),
+                      ]),
+                    ),
+                   
+                      Padding(
+                              padding: EdgeInsets.all(8.0),
+                              child: SizedBox(
+                                width: 400,
+                                child: Expanded(
+                                child: TextFormField(
+                                  keyboardType: TextInputType.multiline,
+                                  maxLines: 30,
+                                  minLines: 10,
+                                  decoration: InputDecoration(
+                                    hintText: 'Esse campo é opcional. Escreve algo que você ache relevante que o psicologo deva saber.',
+                                    //label: const Text('Campo de texto'),
+                                    
+                                    
+                                  ),
+                                ),
+                              ),
+                              ),
+                            
+                            ),
+                  ]
+ ),
+                              );
+                            });
+                      },
+                    ),
+
+
+
                     SizedBox(height: 20),
                     Expanded(
                       child: Column(
@@ -214,9 +278,10 @@ class _BookAppointmentsState extends State<BookAppointments> {
                                       ),
                                     );
                                     //A data será salva na variavel
-                                    dataConsult = DateTimeField.combine(date, time)
-                                        .toString();
-                                      
+                                    dataConsult =
+                                        DateTimeField.combine(date, time)
+                                            .toString();
+
                                     return DateTimeField.combine(date, time);
                                   } else {
                                     return currentValue;
@@ -226,10 +291,10 @@ class _BookAppointmentsState extends State<BookAppointments> {
                             ),
                           ]),
                     ),
-                    Expanded(
-                      child: SizedBox(
-                          width: 80,
-                          height: 10,
+                    SizedBox(
+                      width: 150,
+                      height: 80,
+                      child: Expanded(
                           child: ElevatedButton(
                               onPressed: () {
                                 if (_formKey.currentState!.validate()) {
@@ -238,10 +303,19 @@ class _BookAppointmentsState extends State<BookAppointments> {
                                       'TIPO DE CONSULTA: ' + dropValue.value);
                                   debugPrint('NOME DO PSICOLOGO: ' +
                                       _selectPsychologist.value);
-                                  debugPrint('Data e horario ' +
-                                      dataConsult);
+                                  debugPrint('Data e horario ' + dataConsult);
+                                } else {
+                                  debugPrint('Preencha os campos');
                                 }
                               },
+                              //A estilização desse botão teve que ser manual
+                              style: ElevatedButton.styleFrom(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(5),
+                                ),
+                                maximumSize: Size(double.infinity, 36),
+                                minimumSize: Size(double.infinity, 36),
+                              ),
                               child: Text('Enviar'))),
                     ),
                     SizedBox(height: 10),
