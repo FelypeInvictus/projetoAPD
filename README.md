@@ -14,7 +14,7 @@ Felype
 
 - Banco de dados: Gustavo, Jairo
 - Documentação: Guilherme
-- TCC escrito: Peterson
+- TCC escrito/Suporte Geral: Peterson
 
 
 DESENVOLVEDOR WEB:
