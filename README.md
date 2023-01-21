@@ -12,7 +12,7 @@ BACKEND/FRONTEND:
 Felype
 
 
-- Banco de dados: Gustavo, Jairo
+- Banco de dados/Firebase: Gustavo, Jairo
 - Documentação: Guilherme
 - TCC escrito/Suporte Geral: Peterson
 
