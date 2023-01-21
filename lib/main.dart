@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:apd/components/theme.dart';
 import 'package:apd/widgets/bottom_navigation_bar.dart';
 import 'package:apd/screens/welcome/welcome_screen.dart';

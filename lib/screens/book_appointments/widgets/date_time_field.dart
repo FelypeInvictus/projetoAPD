@@ -36,14 +36,17 @@ class _BasicDataTimeFieldState extends State<BasicDataTimeField> {
         onShowPicker: (context, currentValue) async {
           final date = await showDatePicker(
               context: context,
-              firstDate: DateTime(1900),
+              firstDate: DateTime(2000),
               initialDate: currentValue ?? DateTime.now(),
               lastDate: DateTime(2100));
           if (date != null) {
             final time = await showTimePicker(
               context: context,
               initialTime:
-                  TimeOfDay.fromDateTime(currentValue ?? DateTime.now()),
+                  TimeOfDay.fromDateTime(currentValue ?? DateTime.now(),
+                  
+                  ),
+                  
             );
             return DateTimeField.combine(date, time);
           } else {

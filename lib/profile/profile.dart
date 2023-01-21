@@ -1,5 +1,3 @@
-import 'dart:js_util';
-
 import 'package:apd/components/capitalized_case.dart';
 import 'package:apd/screens/signup/components/signup_form.dart';
 import 'package:flutter/material.dart';
@@ -20,6 +18,7 @@ class _profileUserState extends State<profileUser> {
           padding: EdgeInsets.symmetric(horizontal: 40),
           child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
+    crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 SizedBox(
                   height: 30,

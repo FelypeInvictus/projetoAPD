@@ -1,9 +1,36 @@
-import 'package:apd/screens/book_appointments/widgets/date_choose.dart';
-import 'package:apd/screens/book_appointments/widgets/date_time_field.dart';
-import 'package:apd/screens/book_appointments/widgets/dropdown_list_doctors.dart';
-import 'package:apd/screens/book_appointments/widgets/dropdown_consult_type.dart';
-import 'package:apd/screens/book_appointments/widgets/input_text_user.dart';
+import 'package:apd/components/constants.dart';
+// import 'package:apd/screens/book_appointments/widgets/date_choose.dart';
+// import 'package:apd/screens/book_appointments/widgets/date_time_field.dart';
+// import 'package:apd/screens/book_appointments/widgets/dropdown_list_doctors.dart';
+// import 'package:apd/screens/book_appointments/widgets/dropdown_consult_type.dart';
+// import 'package:apd/screens/book_appointments/widgets/input_text_user.dart';
+import 'package:datetime_picker_formfield/datetime_picker_formfield.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:intl/intl.dart';
+
+//DropDown tipo de consulta - declarando variaveis
+final consultType = {'Presencial', 'Online'};
+final dropValue = ValueNotifier('');
+
+//DropDown lista de psicologos
+final listPsicologos = {
+  'Dr.Arlindo Cruz',
+  'Dra. Linda Morais',
+  'Dr.José Luiz Torres',
+  'Dra. Mônica Scardua',
+  'Dr. Anna Clara Da Silva',
+  'Dra. Maria Pereira',
+  'Dr.Claudio Luiz'
+};
+final _selectPsychologist = ValueNotifier('');
+
+//Variavel DataTImeFIeld
+final format = DateFormat("dd-MM-yyyy HH:mm");
+
+//
+late String dataConsult;
 
 class BookAppointments extends StatefulWidget {
   const BookAppointments({super.key});
@@ -71,26 +98,153 @@ class _BookAppointmentsState extends State<BookAppointments> {
                     ),
                     SizedBox(height: 40),
                     Expanded(
-                      child: dropDownConsultType(),
+                      child: Material(
+                        child: Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 30),
+                          child: SizedBox(
+                            width: 400,
+                            child: ValueListenableBuilder(
+                                valueListenable: dropValue,
+                                builder:
+                                    (BuildContext context, String value, _) {
+                                  return DropdownButtonFormField<String>(
+                                    isExpanded: true,
+                                    decoration: InputDecoration(
+                                      label: const Text(
+                                        'Tipo de consulta',
+                                        textAlign: TextAlign.center,
+                                      ),
+                                      border: OutlineInputBorder(
+                                        borderRadius: BorderRadius.circular(6),
+                                        borderSide: const BorderSide(
+                                            color: kPrimaryColor),
+                                      ),
+                                    ),
+                                    value: (value.isEmpty) ? null : value,
+                                    onChanged: (choose) async {
+                                      dropValue.value = choose.toString();
+
+                                      //debugPrint("TIPO DE CONSULTA: " + dropValue.value);
+                                    },
+                                    items: consultType
+                                        .map(
+                                          (option) => DropdownMenuItem<String>(
+                                            value: option,
+                                            child: Text(option),
+                                          ),
+                                        )
+                                        .toList(),
+                                  );
+                                }),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: Material(
+                        child: Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 30),
+                          child: SizedBox(
+                            width: 400,
+                            child: ValueListenableBuilder(
+                                valueListenable: _selectPsychologist,
+                                builder:
+                                    (BuildContext context, String value, _) {
+                                  return DropdownButtonFormField<String>(
+                                    isExpanded: true,
+                                    decoration: InputDecoration(
+                                      label: const Text(
+                                        'Psicologos',
+                                        textAlign: TextAlign.center,
+                                      ),
+                                      border: OutlineInputBorder(
+                                        borderRadius: BorderRadius.circular(6),
+                                        borderSide: const BorderSide(
+                                            color: kPrimaryColor),
+                                      ),
+                                    ),
+                                    value: (value.isEmpty) ? null : value,
+                                    onChanged: (choose) async {
+                                      _selectPsychologist.value =
+                                          choose.toString();
+                                    },
+                                    items: listPsicologos
+                                        .map(
+                                          (option) => DropdownMenuItem<String>(
+                                            value: option,
+                                            child: Text(option),
+                                          ),
+                                        )
+                                        .toList(),
+                                  );
+                                }),
+                          ),
+                        ),
+                      ),
                     ),
                     SizedBox(height: 20),
                     Expanded(
-                      child: BasicDataTimeField(),
+                      child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            SizedBox(
+                              width: 250,
+                              child: DateTimeField(
+                                decoration: InputDecoration(
+                                  label: Text("Dia e horario"),
+                                  border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(5.0),
+                                      borderSide: const BorderSide(
+                                          color: Colors.green)),
+                                  //  icon: const Icon(Icons.calendar_today),
+                                ),
+                                format: format,
+                                onShowPicker: (context, currentValue) async {
+                                  var date = await showDatePicker(
+                                      context: context,
+                                      firstDate: DateTime(2000),
+                                      initialDate:
+                                          currentValue ?? DateTime.now(),
+                                      lastDate: DateTime(2100));
+                                  if (date != null) {
+                                    final time = await showTimePicker(
+                                      context: context,
+                                      initialTime: TimeOfDay.fromDateTime(
+                                        currentValue ?? DateTime.now(),
+                                      ),
+                                    );
+                                    //A data será salva na variavel
+                                    dataConsult = DateTimeField.combine(date, time)
+                                        .toString();
+                                      
+                                    return DateTimeField.combine(date, time);
+                                  } else {
+                                    return currentValue;
+                                  }
+                                },
+                              ),
+                            ),
+                          ]),
                     ),
                     Expanded(
                       child: SizedBox(
-                          width: 100,
+                          width: 80,
+                          height: 10,
                           child: ElevatedButton(
                               onPressed: () {
                                 if (_formKey.currentState!.validate()) {
                                   _formKey.currentState!.save();
+                                  debugPrint(
+                                      'TIPO DE CONSULTA: ' + dropValue.value);
+                                  debugPrint('NOME DO PSICOLOGO: ' +
+                                      _selectPsychologist.value);
+                                  debugPrint('Data e horario ' +
+                                      dataConsult);
                                 }
                               },
                               child: Text('Enviar'))),
                     ),
                     SizedBox(height: 10),
-
-                    
                   ]),
             ),
           ),

@@ -1,3 +1,6 @@
+import 'package:apd/components/list_psychologist.dart';
+import 'package:flutter/material.dart';
+
 import 'package:flutter/material.dart';
 
 import '../../../components/constants.dart';
@@ -11,7 +14,8 @@ class dropTest extends StatefulWidget {
 
 class _dropTestState extends State<dropTest> {
 
-  final consultType = {'Presencial', 'Online'};
+  final listPsicologos = {
+    'Dr.Arlindo Cruz', 'Dra. Linda Morais', 'Dr.José Luiz Torres', 'Dra. Mônica Scardua', 'Dr. Anna Clara Da Silva', 'Dra. Maria Pereira', 'Dr.Claudio Luiz'};
   final dropValue = ValueNotifier('');
 
   @override
@@ -28,7 +32,7 @@ class _dropTestState extends State<dropTest> {
                   isExpanded: true,
                   decoration: InputDecoration(
                     label: const Text(
-                      'Tipo de consulta',
+                      'Psicologos',
                       textAlign: TextAlign.center,
                     ),
                     border: OutlineInputBorder(
@@ -42,7 +46,7 @@ class _dropTestState extends State<dropTest> {
                    
                     //debugPrint("TIPO DE CONSULTA: " + dropValue.value);
                   },
-                  items: consultType
+                  items: listPsicologos
                       .map(
                         (option) => DropdownMenuItem<String>(
                           value: option,
@@ -124,3 +128,9 @@ class _dropTestState extends State<dropTest> {
 // String showString(String chooseUser) {
 //   return chooseUser;
 // }
+
+// final listPsychologist = [
+//   'Dr.Helen'
+// ],
+
+
