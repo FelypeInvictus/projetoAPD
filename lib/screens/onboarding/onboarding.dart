@@ -25,7 +25,9 @@ buildPage({
             //width: 100,
           ),
           const SizedBox(height: 64),
-          Text(
+          Expanded(
+
+          child: Text(
             title,
             style: TextStyle(
               color: Colors.teal.shade700,
@@ -34,8 +36,10 @@ buildPage({
             ),
             textAlign: TextAlign.justify,
           ),
+          ),
           const SizedBox(height: 35), // O padrão é 24
-          Container(
+          Expanded(
+          child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 50.0),
             child: Text(
               subtitle,
@@ -45,6 +49,7 @@ buildPage({
               ),
               textAlign: TextAlign.justify,
             ),
+          ),
           ),
         ],
       ),
