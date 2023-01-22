@@ -55,7 +55,7 @@ class HomeTab extends StatelessWidget {
                 EmotionalCheckBar(),
 
                 SizedBox(
-                  height: 50,
+                  height: 30,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -94,7 +94,7 @@ class HomeTab extends StatelessWidget {
                 // AppointmentCard(onTap: onPressedScheduleCard),
 
                 SizedBox(
-                  height: 70,
+                  height: 50,
                 ),
                 BookAppointments(),
               ]),
