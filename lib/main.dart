@@ -7,6 +7,18 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 //import 'package:firebase_core/firebase_core.dart';
 
+
+/**
+ * author: Felype Rangel (nickname: Invictus) <felype.invictus@gmail.com>
+ * 
+ * describe: Psychological help application for teachers, 
+ * referral to Burnout syndrome and/or other previously diagnosed psychological syndromes. 
+ * The application includes a Chat for interaction with the psychologist and other users, 
+ * virtual or face-to-face appointments, as well as reporting your doubts/opinions regarding 
+ * emotional problems using the forum.
+ * 
+ * version: 1.0
+ */
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   //WidgetsFlutterBinding.ensureInitialized();
