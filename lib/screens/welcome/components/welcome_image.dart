@@ -10,7 +10,9 @@ class WelcomeImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 40),
+      child: Column(
       children: [
         const Text(
           "Bem-vindo(a) a",
@@ -39,6 +41,6 @@ class WelcomeImage extends StatelessWidget {
         ),
         const SizedBox(height: defaultPadding * 2),
       ],
-    );
+    ));
   }
 }
