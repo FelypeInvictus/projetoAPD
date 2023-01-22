@@ -36,6 +36,7 @@ class SignUpForm extends StatelessWidget {
       key: _formKey,
       child: Column(
         children: [
+          
           Padding(
             padding: const EdgeInsets.symmetric(vertical: defaultPadding),
             child: TextFormField(
@@ -56,6 +57,8 @@ class SignUpForm extends StatelessWidget {
                   RequiredValidator(errorText: "Este campo é obrigatório"),
             ),
           ),
+          
+          
           Padding(
             padding: const EdgeInsets.symmetric(vertical: defaultPadding),
             child: TextFormField(
@@ -73,6 +76,8 @@ class SignUpForm extends StatelessWidget {
               onChanged: (inputLastName) => {loginUPLastName = inputLastName},
             ),
           ),
+      
+     
           Padding(
             padding: const EdgeInsets.symmetric(vertical: defaultPadding),
             child: TextFormField(
@@ -91,6 +96,8 @@ class SignUpForm extends StatelessWidget {
               validator: EmailValidator(errorText: "Use um email válido"),
             ),
           ),
+      
+          
           Padding(
             padding: const EdgeInsets.symmetric(vertical: defaultPadding),
             child: TextFormField(
@@ -108,7 +115,9 @@ class SignUpForm extends StatelessWidget {
               validator: passwordValidator,
             ),
           ),
-          //Confirmará a senha
+          
+          
+         //Confirmará a senha
           Padding(
             padding: const EdgeInsets.symmetric(vertical: defaultPadding),
             child: TextFormField(
@@ -127,8 +136,10 @@ class SignUpForm extends StatelessWidget {
                       .validateMatch(pass!, loginUPPwd),
             ),
           ),
+          
 
           const SizedBox(height: defaultPadding / 2),
+         
           ElevatedButton(
             onPressed: () {
               if (_formKey.currentState!.validate()) {
@@ -160,6 +171,7 @@ class SignUpForm extends StatelessWidget {
             },
             child: Text("Registrar".toUpperCase()),
           ),
+          
           const SizedBox(height: defaultPadding),
           AlreadyHaveAnAccountCheck(
             login: false,
@@ -175,6 +187,7 @@ class SignUpForm extends StatelessWidget {
               );
             },
           ),
+          const SizedBox(height: 50),
         ],
       ),
     );
