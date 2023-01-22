@@ -13,39 +13,42 @@ buildPage({
   required String title,
   required String subtitle,
 }) =>
-    Container(
+    Material(
       color: color,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.asset(
+          Expanded(
+            flex: 3,
+          child:Image.asset(
             urlImage,
             //fit: BoxFit.cover,
             //width: double.infinity,
             //width: 100,
           ),
-          const SizedBox(height: 64),
+          ),
+          const SizedBox(height: 20),
           Expanded(
-
           child: Text(
             title,
             style: TextStyle(
               color: Colors.teal.shade700,
-              fontSize: 25, // Titulo
+              fontSize: 20, // Titulo
               fontWeight: FontWeight.bold,
             ),
             textAlign: TextAlign.justify,
           ),
           ),
-          const SizedBox(height: 35), // O padrão é 24
+          const SizedBox(height: 5), // O padrão é 24
           Expanded(
+            flex: 2,
           child: Container(
-            padding: const EdgeInsets.symmetric(horizontal: 50.0),
+            padding: const EdgeInsets.symmetric(horizontal: 30.0),
             child: Text(
               subtitle,
               style: const TextStyle(
                 color: Colors.black26,
-                fontSize: 20,
+                fontSize: 15,
               ),
               textAlign: TextAlign.justify,
             ),
