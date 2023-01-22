@@ -31,6 +31,8 @@ final format = DateFormat("dd-MM-yyyy HH:mm");
 //
 late String dataConsult;
 
+//
+
 class BookAppointments extends StatefulWidget {
   const BookAppointments({super.key});
 
@@ -39,6 +41,9 @@ class BookAppointments extends StatefulWidget {
 }
 
 class _BookAppointmentsState extends State<BookAppointments> {
+  final _selectMessage = TextEditingController();
+  late String _text;
+
   final _formKey = GlobalKey<FormState>();
 
   @override
@@ -52,7 +57,7 @@ class _BookAppointmentsState extends State<BookAppointments> {
           enableDrag: true,
           backgroundColor: Colors.transparent,
           builder: (context) => Container(
-            height: MediaQuery.of(context).size.height * 0.60,
+            height: MediaQuery.of(context).size.height * 0.75,
             decoration: new BoxDecoration(
               color: Colors.white,
               borderRadius: new BorderRadius.only(
@@ -181,72 +186,7 @@ class _BookAppointmentsState extends State<BookAppointments> {
                         ),
                       ),
                     ),
-                    TextButton(
-                      child: Text(
-                        'Enviar mensagem',
-                        style: TextStyle(
-                          color: Color(MyColors.yellow01),
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      onPressed: () {
-                        showDialog(
-                            context: context,
-                            builder: (BuildContext context) {
-                              return AlertDialog(
-                                scrollable: true,
-                  content: Column(
-                  //mainAxisAlignment: MainAxisAlignment.center,
-                  //mainAxisSize: MainAxisSize.min,
-                  children: <Widget>[
-                    SizedBox(height: 10),
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 30),
-                      child: Row(children: [
-                        Spacer(),
-                        InkWell(
-                          onTap: () {
-                            Navigator.of(context).pop();
-                          },
-
-                          child: Icon(Icons.close),
-
-                          //foregroundColor: Colors.grey,
-                          //backgroundColor: Colors.red,
-                        ),
-                      ]),
-                    ),
-                   
-                      Padding(
-                              padding: EdgeInsets.all(8.0),
-                              child: SizedBox(
-                                width: 400,
-                                child: Expanded(
-                                child: TextFormField(
-                                  keyboardType: TextInputType.multiline,
-                                  maxLines: 30,
-                                  minLines: 10,
-                                  decoration: InputDecoration(
-                                    hintText: 'Esse campo é opcional. Escreve algo que você ache relevante que o psicologo deva saber.',
-                                    //label: const Text('Campo de texto'),
-                                    
-                                    
-                                  ),
-                                ),
-                              ),
-                              ),
-                            
-                            ),
-                  ]
- ),
-                              );
-                            });
-                      },
-                    ),
-
-
-
-                    SizedBox(height: 20),
+                    //SizedBox(height: 20),
                     Expanded(
                       child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -255,7 +195,8 @@ class _BookAppointmentsState extends State<BookAppointments> {
                               width: 250,
                               child: DateTimeField(
                                 decoration: InputDecoration(
-                                  label: Text("Dia e horario"),
+                                  //Fiquei com preguiça de escrever em caixa alta kkkkk
+                                  label: Text('Dia e horario'),
                                   border: OutlineInputBorder(
                                       borderRadius: BorderRadius.circular(5.0),
                                       borderSide: const BorderSide(
@@ -291,10 +232,94 @@ class _BookAppointmentsState extends State<BookAppointments> {
                             ),
                           ]),
                     ),
+                    TextButton(
+                      child: Text(
+                        'Enviar recado',
+                        style: TextStyle(
+                          color: Color(MyColors.yellow01),
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      onPressed: () {
+                        showDialog(
+                            context: context,
+                            builder: (BuildContext context) {
+                              return AlertDialog(
+                                  scrollable: true,
+                                  content: Column(
+                                      //mainAxisAlignment: MainAxisAlignment.center,
+                                      //mainAxisSize: MainAxisSize.min,
+                                      children: <Widget>[
+                                        SizedBox(height: 10),
+                                        Padding(
+                                          padding: EdgeInsets.symmetric(
+                                              horizontal: 30),
+                                          child: Row(children: [
+                                            Spacer(),
+                                            InkWell(
+                                              onTap: () {
+                                                Navigator.of(context).pop();
+                                              },
+
+                                              child: Icon(Icons.close),
+
+                                              //foregroundColor: Colors.grey,
+                                              //backgroundColor: Colors.red,
+                                            ),
+                                          ]),
+                                        ),
+                                        Padding(
+                                          padding: EdgeInsets.all(8.0),
+                                          child: SizedBox(
+                                            width: 400,
+                                            
+                                              child: TextFormField(
+                                                controller: _selectMessage,
+                                                keyboardType:
+                                                    TextInputType.multiline,
+                                                maxLines: 30,
+                                                minLines: 10,
+                                                decoration: InputDecoration(
+                                                  hintText:
+                                                      'Esse campo é opcional. Escreve algo que você ache relevante que o psicologo deva saber.',
+                                                  //label: const Text('Campo de texto'),
+                                                ),
+                                              ),
+                                            
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          width: 100,
+                                          child: ElevatedButton(
+                                            onPressed: () {
+                                              setState(() {
+                                                _text = _selectMessage.text;
+                                              });
+                                              Navigator.of(context).pop();
+                                            },
+                                            child: Text('Salvar'),
+                                            style: ElevatedButton.styleFrom(
+                                              shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(5),
+                                              ),
+                                              maximumSize:
+                                                  Size(double.infinity, 36),
+                                              minimumSize:
+                                                  Size(double.infinity, 36),
+                                            ),
+                                          ),
+                                        ),
+                                      ]
+                                      ),
+                                      );
+                            });
+                      },
+                    ),
                     SizedBox(
                       width: 150,
                       height: 80,
-                      child: Expanded(
+                      
                           child: ElevatedButton(
                               onPressed: () {
                                 if (_formKey.currentState!.validate()) {
@@ -303,10 +328,9 @@ class _BookAppointmentsState extends State<BookAppointments> {
                                       'TIPO DE CONSULTA: ' + dropValue.value);
                                   debugPrint('NOME DO PSICOLOGO: ' +
                                       _selectPsychologist.value);
-                                  debugPrint('Data e horario ' + dataConsult);
-                                } else {
-                                  debugPrint('Preencha os campos');
-                                }
+                                  debugPrint('DATA E HORA:  ' + dataConsult);
+                                  debugPrint('CAIXA DE TEXTO: ' + _text);
+                                } else {}
                               },
                               //A estilização desse botão teve que ser manual
                               style: ElevatedButton.styleFrom(
@@ -316,7 +340,7 @@ class _BookAppointmentsState extends State<BookAppointments> {
                                 maximumSize: Size(double.infinity, 36),
                                 minimumSize: Size(double.infinity, 36),
                               ),
-                              child: Text('Enviar'))),
+                              child: Text('Enviar'))
                     ),
                     SizedBox(height: 10),
                   ]),
