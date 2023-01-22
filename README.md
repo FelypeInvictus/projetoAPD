@@ -113,7 +113,7 @@ lib
 **LICENSE**
 
 ```
-Copyright (c) 2023 Felype Rangel & Members
+Copyright (c) 2023 Felype Rangel
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
