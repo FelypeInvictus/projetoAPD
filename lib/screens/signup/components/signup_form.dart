@@ -13,7 +13,10 @@ String loginUPLastName = 'master';
 String loginUPEmail = 'admin';
 String loginUPPwd = 'admin';
 
+
+
 // Configuração do firebase / Entrada de dados
+// Nem rolou — ainda
 
 // Editando Controller
 final firstNameEditingController = new TextEditingController();
@@ -24,19 +27,29 @@ final confirmPasswordEditingController = new TextEditingController();
 
 final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
-class SignUpForm extends StatelessWidget {
-  const SignUpForm({
-    Key? key,
-  }) : super(key: key);
+class SignUpForm extends StatefulWidget {
+  
+  const SignUpForm({super.key});
 
-  //late String loginUPName, loginUPLastName, loginUPEmail, loginUPPwd;
+  @override
+  State<SignUpForm> createState() => _SignUpFormState();
+}
+
+class _SignUpFormState extends State<SignUpForm> {
+  //Declaração da variavel obscure (Para ocultar senha quando o usario clicar)
+bool _obscureText = true;
+  void _toggle() {
+    setState(() {
+      _obscureText = !_obscureText;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Form(
       key: _formKey,
       child: Column(
         children: [
-          
           Padding(
             padding: const EdgeInsets.symmetric(vertical: defaultPadding),
             child: TextFormField(
@@ -57,8 +70,7 @@ class SignUpForm extends StatelessWidget {
                   RequiredValidator(errorText: "Este campo é obrigatório"),
             ),
           ),
-          
-          
+
           Padding(
             padding: const EdgeInsets.symmetric(vertical: defaultPadding),
             child: TextFormField(
@@ -76,8 +88,7 @@ class SignUpForm extends StatelessWidget {
               onChanged: (inputLastName) => {loginUPLastName = inputLastName},
             ),
           ),
-      
-     
+
           Padding(
             padding: const EdgeInsets.symmetric(vertical: defaultPadding),
             child: TextFormField(
@@ -96,33 +107,39 @@ class SignUpForm extends StatelessWidget {
               validator: EmailValidator(errorText: "Use um email válido"),
             ),
           ),
-      
-          
+
           Padding(
             padding: const EdgeInsets.symmetric(vertical: defaultPadding),
             child: TextFormField(
               //textInputAction: TextInputAction.done,
-              obscureText: true,
+              obscureText: _obscureText,
               cursorColor: kPrimaryColor,
-              decoration: const InputDecoration(
-                hintText: "Criar senha",
-                prefixIcon: Padding(
-                  padding: EdgeInsets.all(defaultPadding),
-                  child: Icon(Icons.lock),
-                ),
-              ),
+              decoration:  InputDecoration(
+                  hintText: "Criar senha",
+                  prefixIcon: Padding(
+                    padding: EdgeInsets.all(defaultPadding),
+                    child: Icon(Icons.lock),
+                  ),
+                  suffix: IconButton(
+                      onPressed:  () {
+                        setState(() {
+            _obscureText = !_obscureText;
+        });
+                      },
+                      
+                    
+                      icon: _obscureText ? Icon(Icons.visibility) : Icon(Icons.visibility_off) )),
               onChanged: (inputPWD) => loginUPPwd = inputPWD,
               validator: passwordValidator,
             ),
           ),
-          
-          
-         //Confirmará a senha
+
+          //Confirmará a senha
           Padding(
             padding: const EdgeInsets.symmetric(vertical: defaultPadding),
             child: TextFormField(
               //textInputAction: TextInputAction.done,
-              obscureText: true,
+              obscureText: _obscureText,
               cursorColor: kPrimaryColor,
               decoration: InputDecoration(
                 hintText: "Confirmar senha",
@@ -136,18 +153,17 @@ class SignUpForm extends StatelessWidget {
                       .validateMatch(pass!, loginUPPwd),
             ),
           ),
-          
 
           const SizedBox(height: defaultPadding / 2),
-         
+
           ElevatedButton(
             onPressed: () {
               if (_formKey.currentState!.validate()) {
                 _formKey.currentState!.save();
                 showTopSnackBar(
-                  context,
-                  CustomSnackBar.success(
-                      message: "Registro realizado com sucesso"));
+                    context,
+                    CustomSnackBar.success(
+                        message: "Registro realizado com sucesso"));
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) {
@@ -171,12 +187,11 @@ class SignUpForm extends StatelessWidget {
             },
             child: Text("Registrar".toUpperCase()),
           ),
-          
+
           const SizedBox(height: defaultPadding),
           AlreadyHaveAnAccountCheck(
             login: false,
             press: () {
-              
               Navigator.push(
                 context,
                 MaterialPageRoute(
